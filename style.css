@@ -11,5 +11,14 @@
     color: white;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: lightcoral;
+    color: lightblue;
 }
+
+.size{
+    display: block;
+    margin-left: 21%;
+    width: 60%;
+    height: auto;
+}
+
+
