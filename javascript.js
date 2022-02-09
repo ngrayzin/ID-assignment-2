@@ -1,16 +1,16 @@
-$('.carousel[data-type="multi"] .item').each(function() {
-	var next = $(this).next();
-	if (!next.length) {
-		next = $(this).siblings(':first');
-	}
-	next.children(':first-child').clone().appendTo($(this));
-
-	for (var i = 0; i < 3; i++) {
-		next = next.next();
-		if (!next.length) {
-			next = $(this).siblings(':first');
-		}
-
-		next.children(':first-child').clone().appendTo($(this));
-	}
-});
+function fetchBreed(){
+    $.get('https://dog.ceo/api/breeds/list/all', (data) => {
+      const breedNames = data.message;
+      const select = document.getElementById('select');
+  
+      for (const key in breedNames) {
+        if (breedNames.hasOwnProperty(key)) {
+          const option = document.createElement('option');
+          option.value = key;
+          option.innerHTML = key;
+          
+          select.appendChild(option);
+        }
+      }
+    });
+  }
