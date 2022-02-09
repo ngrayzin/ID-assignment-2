@@ -15,16 +15,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <img src="images/Heart paw.png" alt="Logo" width="65" height="60" style="border: black;" class="d-inline-block align-text-top">
+            <a href="index.html">
+              <img src="images/Heart paw.png" alt="Logo" width="65" height="60" style="border: black;" class="d-inline-block align-text-top">
+            </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="pills-tab">
-              <li class="nav-item">
-                <li class="nav-item">
-                  <a class="nav-link" style="margin: 20px; font-size: 30px;" href="index.html">Home</a>
+                  <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px;" href="index.html">Home</a>
                 </li>
-                <a class="nav-link active" style="margin: 20px; font-size: 30px;" aria-current="page" href="Pets.html">Pets</a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" style="margin-top: 20px; margin-left: 20px; margin-right: 20px; font-size: 30px;border-radius: 20px;background-color: lightblue;" href="#" data-bs-toggle="dropdown">Pets </a>
+                 <ul class="dropdown-menu">
+
+                 <li>
+                   <a class="dropdown-item" href="Dogs.html"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a></li>
+                 <li><a class="dropdown-item" href="Cats.html"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a></li>
+                 </ul>
+             </li>
               <li class="nav-item">
-                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="#">About us</a>
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Info.html">About us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="margin: 20px; font-size: 30px;">Shop</a>
@@ -41,21 +48,9 @@
         </div>
       </nav>
 
-    <button onclick="fetchBreed()">Fetch Breeds</button>
-    
-    <form>
-        <label>Choose a Breed:</label>
-        <select  id="select">
-            <option value=""></option>
-        </select>
-    </form>
-    <button id="fetch-dog-image-button" style="margin: 10px;">Fetch Image</button>
-    <div id="dog-image-container" style="margin: 20px;">
-        <img id="dog-image">
-    </div>
-
-    
+      
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="javascript.js"></script> 
+  </body>
   </body>
 </html>
