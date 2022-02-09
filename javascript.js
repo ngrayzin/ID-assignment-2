@@ -14,3 +14,22 @@ $('.carousel[data-type="multi"] .item').each(function() {
 		next.children(':first-child').clone().appendTo($(this));
 	}
 });
+
+function unhidedog(){
+    var x = document.getElementById("shop-container-dog")
+    if (x.style.display === "none"){
+        x.style.display = "block";
+    }else{
+        x.style.display = "none";
+    }
+}
+
+function unhidecat(){
+    var x = document.getElementById("shop-container-cat")
+    if (x.style.display === "none"){
+        x.style.display = "block";
+    }else{
+        x.style.display = "none";
+    }
+}
+
