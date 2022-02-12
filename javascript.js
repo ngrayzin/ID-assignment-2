@@ -76,7 +76,7 @@ function fetchBreed(){
               if(doglist[i].breeds.secondary != null)
               {
                 document.getElementById("dogcards").innerHTML += `
-                <div class="card mb-3" style="max-width: 540px;margin-left:5%">
+                <div class="card mb-3" style="max-width: 540px;margin-left:5%;flex: 2 1 100%;">
                   <div class="row g-0 row-cols-1 row-cols-md-2 g-4">
                     <div class="col-md-4">
                       <img src="images/dawg.jpeg" class="img-fluid" alt="dog image" style = "border-radius:5px 5px 5px 5px;height:100%;width:120%">
@@ -84,9 +84,9 @@ function fetchBreed(){
                     <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">${doglist[i].name}</h5>
-                        <p class="card-text id = "b">description: ${doglist[i].gender}</p>
+                        <p class="card-text id = "b">gender: ${doglist[i].gender}</p>
                         <p class="card-text id = "b">breed: ${doglist[i].breeds.primary}, ${doglist[i].breeds.secondary}</p>
-                        <p class="card-text id = "b">description: ${doglist[i].description}</p>
+                        <p class="card-text id = "b">description: ${doglist[i].name} is an amazing dog</p>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -161,17 +161,17 @@ function fetchBreed(){
               }
               else if(doglist[i].breeds.secondary == null){
                 document.getElementById("dogcards").innerHTML += `
-                <div class="card mb-3" style="max-width: 540px;margin-left:5%">
+                <div class="card mb-3" style="max-width: 540px;margin-left:5%;flex: 2 1 100%;">
                   <div class="row g-0 row-cols-1 row-cols-md-2 g-4">
                     <div class="col-md-4">
-                      <img src="images/dawg.jpeg" class="img-fluid" alt="dog image" style = "border-radius:5px 5px 5px 5px;height:100%;width:110%">
+                      <img src="images/dawg.jpeg" class="img-fluid" alt="dog image" style = "border-radius:5px 5px 5px 5px;height:100%;width:120%">
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">${doglist[i].name}</h5>
-                        <p class="card-text id = "b">description: ${doglist[i].gender}</p>
+                        <p class="card-text id = "b">gender: ${doglist[i].gender}</p>
                         <p class="card-text id = "b">breed: ${doglist[i].breeds.primary}</p>
-                        <p class="card-text id = "b">description: ${doglist[i].description}</p>
+                        <p class="card-text id = "b">description: ${doglist[i].name} is an amazing dog.</p>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
