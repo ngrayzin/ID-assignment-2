@@ -21,21 +21,6 @@
     height: auto;
 }
 
-.shop-container{
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-evenly;
-}
-
-.shop-items-container{
-    display: flex;
-    position: relative;
-    flex-flow: column wrap;
-    margin: 20px;
-    background-color: peachpuff;
-    text-align: center;
-}
-
 .cover-dog{
     height: 200px;
     background: url(images/Dog\ shop\ icon.jpg),url(images/dog\ toy.jpg),url(images/Dog\ bed.jpg);
@@ -90,15 +75,20 @@
 
 .cover-cat{
     height: 200px;
-    background: url(images/cat\ treat.jpg),url(images/cat\ toy.jpg),url(images/litter\ box.jpg);
+    background: url(images/ciao\ sticks.jpg),url(images/cat\ toy.jpg),url(images/litter\ box.jpg);
     background-position: left, right, top;
     background-repeat: no-repeat, no-repeat,no-repeat;
     background-size: 34% 250px, 33% 250px, 34% 240px;
 }
 
 #shop-container-dog{
+    display: block;
+}
+
+#shop-container-cat{
     display: none;
 }
+
 * {
     box-sizing: border-box;
   }
@@ -140,7 +130,108 @@
     text-align: center;
     background-color: #f1f1f1;
   }
+  
+.buynowbutton {
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      background: red;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+      background: #e62222;
+  }
+  
+.buynowbutton, button span {
+      transition: 300ms;
+  }
+  
+.buynowbutton .text {
+      transform: translateX(0px);
+      color: white;
+      font-weight: bold;
+  }
+  
+.buynowbutton .icon {
+      position: absolute;
+      border-left: 1px solid #c41b1b;
+      transform: translateX(95px);
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
 
-#shop-container-cat{
-    display: none;
+.buynowbutton:hover {
+      background: #ff3636;
+  }
+  
+.buynowbutton:hover .text {
+      color: transparent;
+  }
+  
+.buynowbutton:hover .icon {
+      width: 150px;
+      border-left: none;
+      transform: translateX(-8px);
+    }
+  
+.buynowbutton:focus {
+      outline: none;
+  }
+
+.petshop-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.petshop-item-container{
+    display: flex;
+    flex-flow: column;
+    margin: 20px;
+    background-color: whitesmoke;
+    width: 30%;
+    position: relative;
+}
+
+.petshop-item-container img{
+    height: 400px;
+    display: block;
+}
+
+.petshop-item h3{
+    font-weight: bold;
+}
+
+.petshop-item{
+    display: flex;
+    flex-flow: column wrap;
+    width: 95%;
+    text-align: start;
+    margin: auto;
+    text-align: center;
+}
+
+.image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0,0,0.6);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.image-overlay:hover{
+    opacity: 1 ;
 }

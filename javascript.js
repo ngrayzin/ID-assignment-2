@@ -49,7 +49,6 @@ function fetchBreed(){
       }
     });
   }
-<<<<<<< HEAD
 
   /*const items = document.getElementById("items");
 
@@ -87,5 +86,3 @@ function fetchBreed(){
       }
 
   });*/
-=======
->>>>>>> eafd784b765866adfb0d8b75d65f748686f62b55
