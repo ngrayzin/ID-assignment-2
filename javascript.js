@@ -15,23 +15,26 @@ $('.carousel[data-type="multi"] .item').each(function() {
 	}
 });
 
-function unhidedog(){
+function unhidedog(anchor){
     var x = document.getElementById("shop-container-dog")
     if (x.style.display === "none"){
         x.style.display = "block";
     }else{
         x.style.display = "none";
     }
+    document.location.href = "#"+anchor
 }
 
-function unhidecat(){
+function unhidecat(anchor){
     var x = document.getElementById("shop-container-cat")
     if (x.style.display === "none"){
         x.style.display = "block";
     }else{
         x.style.display = "none";
     }
+    document.location.href = "#"+anchor
 }
+
 const imageRandom = document.getElementById("imageRandom");
 
 
@@ -559,3 +562,137 @@ $(document).ready(function(){
       }
 
   }); */
+
+
+let CartList = []//empty array list
+var localstring = localStorage.getItem('MyCartList');//gets array
+var ItemsinArray = JSON.parse(localstring);//converts string to array
+console.log(ItemsinArray);
+
+
+if(document.readyState == 'loading'){
+    document.addEventListener('DOMContentLoaded',ready) //checks if page has loaded finish if it has it will call the ready function
+} else{
+    ready()
+    addToCartClicked()
+}
+
+function ready(){
+    var removeCartItemButton = document.getElementsByClassName('ProductRemove')
+    for (var i = 0; i<removeCartItemButton.length;i++){
+        var button = removeCartItemButton[i]
+        button.addEventListener('click',removeCartItem)//when ProductRemove button has been clicked it will fire the removeCartItem function
+    }
+
+    var quantityInputs = document.getElementsByClassName('CartQuantity')
+    for (var i = 0; i <quantityInputs.length;i++){
+        var input = quantityInputs[i]
+        input.addEventListener('change',quantityChanged)//when CartQuantity button has been changed it will fire the quantityChanged function
+    }
+    var addToCartButtons = document.getElementsByClassName('buynowbutton')
+    for (var i = 0; i <addToCartButtons.length;i++){
+        var button = addToCartButtons[i]
+        button.addEventListener('click', addingToArray)//when buynowbutton button has been clicked it will fire the addingToArray function
+    }
+}
+
+function CartClicked(){
+    alert('Please enter your card details to pay!')//sends a message to the page where it pops up
+    window.localStorage.clear();//clears the local storage as they are now paying
+    location.reload()//reloads the whole page so the page updates
+    updateCartTotal()//updates the total as there is no items
+} 
+
+function removeCartItem(event){
+    var buttonclicked = event.target
+    buttonclicked.parentElement.parentElement.remove()//removes that item in the array
+    updateCartTotal()//updates price
+}
+
+function quantityChanged(event){
+    var input = event.target
+    if (isNaN(input.value) || input.value <=0){//makes it so there cant be below 1 quantity
+        input.value=1
+    }
+    updateCartTotal()//updates quantity change
+}
+
+function addingToArray(event){
+    var button =event.target
+    var product = button.parentElement.parentElement.parentElement
+    var parent1 = product.parentElement
+    var parent2 = parent1.parentElement
+    console.log((product).getElementsByClassName("ItemName")[0].innerText)
+    let addcartitems = {
+        title: product.getElementsByClassName("ItemName")[0].innerText,//adding finding items to put into array
+        price: product.getElementsByClassName("ItemPrice")[0].innerText,
+        img : product.getElementsByClassName("ItemImage")[0].src
+    }
+        var existingstring = localStorage.getItem('MyCartList')//makes a var from exisiting array
+        if (existingstring == null){//if there is no array exisiting it will create one
+            CartList.push(addcartitems);//adds the new object to the array
+            console.warn('added',{CartList});
+            alert('Item added to cart')
+            localStorage.setItem('MyCartList',JSON.stringify(CartList)); //makes it string to transfer over to other pages from localStorage
+        }else{
+            var existing = JSON.parse(existingstring);//if there is exisiting array it will convert it back from string to array
+            existing.push(addcartitems);//adds new object
+            console.warn('added',{existing});
+            alert('Item added to cart')
+            localStorage.setItem('MyCartList',JSON.stringify(existing)); //makes array into string for localStorage
+        }
+};
+
+function addToCartClicked(event){
+    for (var i = 0; i <ItemsinArray.length; i++){
+    var title = ItemsinArray[i].title//gets that items title
+    var price = ItemsinArray[i].price//gets that items price
+    var img = ItemsinArray[i].img// gets that items image link
+    console.log(title,price,img)
+    if (title)
+    addItemToCart(title,price,img)//calls function and puts perimeters inside
+    updateCartTotal()//updates cart total because it added a new items so there is a new total
+    }
+}
+
+function addItemToCart(title,price,imageSrc){//adds that item to cart
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('CartRow')
+    var cartItems = document.getElementsByClassName('CartItems')[0]
+    var cartItemNames =cartItems.getElementsByClassName('CartTitle')
+    for (var i = 0; i <cartItemNames.length; i++){//checks if there are duplicates
+        if (cartItemNames[i].innerHTML == title){
+            alert('There has been a duplicate item added!')
+            return
+        }
+    }
+    var cartRowContents = `
+            <div class="CartColumn">
+                <img class="CartImage" src="${imageSrc}">
+                <span class="CartTitle">${title}</span>
+            </div>
+            <span class="CartPrice CartColumn">${price}</span>
+            <div class="CartColumn">
+                <input class="CartQuantity" type="number" value="1">
+                <button class="ProductRemove" type="button">REMOVE</button>
+            </div>`//prints out the items in that format
+        cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('ProductRemove')[0].addEventListener('click',removeCartItem)//if they click on the remove button it will call the remove function which will remove that item
+    cartRow.getElementsByClassName('CartQuantity')[0].addEventListener('change',quantityChanged)//sees if quantity changed so they make sure it cant go below 1 and can update cart total
+}
+
+ function updateCartTotal(){//Updates total
+     var cartItemContainer =document.getElementsByClassName('CartItems')[0]//wants the first element of the array
+     var CartRows = cartItemContainer.getElementsByClassName('CartRow')//gets all the elements inside the object like price or title
+     var total=0
+    for (var i = 0; i<CartRows.length;i++){
+        var CartRow = CartRows[i]
+        var PriceElement = CartRow.getElementsByClassName('CartPrice')[0]//gets price
+        var quantityElement =CartRow.getElementsByClassName('CartQuantity')[0]//gets quantity
+        var price = parseFloat(PriceElement.innerText.replace('$',''))  //parsefloat turns any string into a float
+        var quantity = quantityElement.value
+        total =total+(price*quantity)//finds total
+    }total = Math.round((total*100) / 100)//makes the total 2 decimal
+    document.getElementsByClassName('CartTotal')[0].innerText = "$" + total//shows the total
+ }

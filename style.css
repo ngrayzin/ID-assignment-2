@@ -22,28 +22,40 @@
 }
 
 .cover-dog{
-    height: 200px;
+    height: 300px;
     background: url(images/Dog\ shop\ icon.jpg),url(images/dog\ toy.jpg),url(images/Dog\ bed.jpg);
     background-position: left, right, top;
     background-repeat: no-repeat, no-repeat,no-repeat;
-    background-size: 34% 200px, 33% 330px, 34% 200px;
+    background-size: 34% 100%, 33% 100%, 34.2% 100%;
     margin-bottom: 5px;
 }
 .cover-image{
     display: flex;
     flex-flow: column wrap;
     text-align: center;
+    justify-content: center;
+    height: 140px;
 }
 .cover-image button{
     width: 200px; 
-    border-radius: 30px;
-    background-color: transparent;
-    color: green;
-    border-color: green;
+    height: 50px;
+    border-radius: 10px;
+    background-color: pink;
+    color: white;
+    border-color: pink;
     margin-left: auto;
     margin-right: auto;
 }
 
+.petshop-dog-button:hover{
+    box-shadow: 4px 4px gray;
+    transition: .3s;
+}
+
+.petshop-cat-button:hover{
+    box-shadow: 4px 4px gray;
+    transition: .3s;
+}
 
 .petshop-header-image{
     width: 40%;
@@ -74,19 +86,11 @@
 }
 
 .cover-cat{
-    height: 200px;
+    height: 300px;
     background: url(images/ciao\ sticks.jpg),url(images/cat\ toy.jpg),url(images/litter\ box.jpg);
     background-position: left, right, top;
     background-repeat: no-repeat, no-repeat,no-repeat;
-    background-size: 34% 250px, 33% 250px, 34% 240px;
-}
-
-#shop-container-dog{
-    display: block;
-}
-
-#shop-container-cat{
-    display: none;
+    background-size: 34% 100%, 33% 100%, 34.2% 100%;
 }
 
 * {
@@ -340,11 +344,11 @@ body{
   }
   
 .buynowbutton, button span {
-      transition: 300ms;
+      transition: 350ms;
   }
   
 .buynowbutton .text {
-      transform: translateX(0px);
+      transform: translateX(5px);
       color: white;
       font-weight: bold;
   }
@@ -352,7 +356,7 @@ body{
 .buynowbutton .icon {
       position: absolute;
       border-left: 1px solid #c41b1b;
-      transform: translateX(95px);
+      transform: translateX(100px);
       height: 50px;
       width: 50px;
       display: flex;
@@ -371,7 +375,7 @@ body{
 .buynowbutton:hover .icon {
       width: 150px;
       border-left: none;
-      transform: translateX(-8px);
+      transform: translateX(0px);
     }
   
 .buynowbutton:focus {
@@ -390,8 +394,9 @@ body{
     flex-flow: column;
     margin: 20px;
     background-color: whitesmoke;
-    width: 30%;
+    width: 400px;
     position: relative;
+    border-style: solid;
 }
 
 .petshop-item-container img{
@@ -399,8 +404,9 @@ body{
     display: block;
 }
 
-.petshop-item h3{
+.petshop-item h1{
     font-weight: bold;
+    font-size: 28px;
 }
 
 .petshop-item{

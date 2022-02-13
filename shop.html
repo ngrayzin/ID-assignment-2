@@ -25,10 +25,12 @@
               <li class="nav-item dropdown">
                 <a class="nav-link  dropdown-toggle" style="margin-top: 20px; margin-left: 20px; margin-right: 20px; font-size: 30px;" href="#" data-bs-toggle="dropdown">Pets </a>
                  <ul class="dropdown-menu">
-
-                 <li>
-                   <a class="dropdown-item" href="#"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a></li>
-                 <li><a class="dropdown-item" href="#"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a></li>
+                  <li>
+                    <a class="dropdown-item" href="Dogs.html"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a>
+                   </li>
+                  <li>
+                    <a class="dropdown-item" href="Cats.html"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a>
+                   </li>
                  </ul>
              </li>
               <li class="nav-item">
@@ -45,6 +47,7 @@
               <input class="form-control me-2" style="margin: 20px;" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" style="margin: 20px;" type="submit">Search</button>
             </form>
+            <img src="images/Cart.png" style="width:60px; height:60px; margin: 20px;" alt="">
           </div>
         </div>
       </nav>
@@ -55,7 +58,7 @@
             <div class="petshop-information-content">
                 <h2>Why choose us?</h2>
                 <p>At PetHaven we are focused on helping refacilitate these abadoned animals. We want these animals to feel comfortable. Therefore, we made an online store to house any item needed to help with the process. We offer all sorts of pet foods, pet toys, and even furniture so they can feel right at home. A additional benefit of buying from us is that all the proceeds will go right back into the animal rescue project of ours.</p>
-                <h1>So, choose us!</h1>
+                <h1>Please consider us!</h1>
             </div>
         </div>
       </div>
@@ -63,74 +66,75 @@
       <div class="cover-dog">
         <div class="cover-image">
             <h1>Dogs</h1>
-            <button class="petshop-dog-button" onclick="unhidedog()">Click here for more!</button>
+            <button class="petshop-dog-button" onclick="unhidedog('anchor-dog')">Click here for more!</button>
         </div>
       </div>
-      <div  id="shop-container-dog">
+      <div id="shop-container-dog" style="display: none;" >
+        <a id="anchor-dog"></a>
         <div class="petshop-container">
           <div class="petshop-item-container">
-            <img src="images/dog toy.jpg" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <div class="petshop-item">
-              <h3>Duck Dog Squeaky Toy</h3>
-              <h3>$5.00</h3>
-              <h4>When the toy is squeezed, air is forced through the squeaker, resulting in a high-pitched sound, such as a squeak.</h4>
-            </div>
+            <img src="images/dog toy.jpg" alt="" class="ItemImage">
+              <div class="petshop-item">
+                <h1 class="ItemName">Duck Dog Squeaky Toy</h1>
+                <h1 class="ItemPrice">$5.00</h1>
+                <h4>When the toy is squeezed, air is forced through the squeaker, resulting in a high-pitched sound, such as a squeak.</h4>
+              </div>
           </div>
           <div class="petshop-item-container">
-            <img src="images/Dog bed.jpg" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
+            <img src="images/Dog bed.jpg" alt="" class="ItemImage">
             <div class="petshop-item">
-              <h3>Cotton Dog Bed</h3>
-              <h3>$40.00</h3>
+              <h1 class="ItemName">Cotton Dog Bed</h1>
+              <h1 class="ItemPrice">$40.00</h1>
               <h4>They can be used for napping during the day and sleepi1ng in at night. Unlike the floor, a bed will keep your dog warm, support arthritic joints, and prevent calluses.</h4>
             </div>
           </div>
           <div class="petshop-item-container">
-            <img src="images/dog treats.jpg" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
+            <img src="images/dog treats.jpg" alt="" class="ItemImage">
             <div class="petshop-item">
-              <h3>Dog Treats of all flavours (2 of each)</h3>
-              <h3>$30.00</h3>
+              <h1 class="ItemName">Dog Treats of all flavours (2 of each)</h1>
+              <h1 class="ItemPrice">$30.00</h1>
               <h4>Dog treats for all flavours. Expect the best quality dog food.</h4>
             </div>
           </div>
           <div class="petshop-item-container">
-            <img src="images/anti choking bowl.jfif" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
+            <img src="images/anti choking bowl.jfif" alt="" class="ItemImage">
             <div class="petshop-item">
-              <h3>Anti Choking Dog Bowl</h3>
-              <h3>$25.00</h3>
+              <h1 class="ItemName">Anti-Choking-Dog Bowl</h1>
+              <h1 class="ItemPrice">$25.00</h1>
               <h4>A bowl meant to stop dogs from eating their food too quickly and choking.</h4>
             </div>
           </div>
           <div class="petshop-item-container">
-            <img src="images/dog kibble.jpg" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
+            <img src="images/dog kibble.jpg" alt="" class="ItemImage">
             <div class="petshop-item">
-              <h3>Dog Kibble (Grilled Steak and Vegetable 15Kg)</h3>
-              <h3>$250.00</h3>
+              <h1 class="ItemName">Dog Kibble (Grilled Steak and Vegetable 15Kg)</h1>
+              <h1 class="ItemPrice">$250.00</h1>
               <h4>This dry food recipe helps maintain a healthy lifestyle with antioxidants, vitamins, and minerals, in the delicious, meaty steak flavor dogs love</h4>
             </div>
           </div>
           <div class="petshop-item-container">
-            <img src="images/borris johnson chew.jfif" alt="">
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
+            <img src="images/borris johnson chew.jfif" alt="" class="ItemImage">
             <div class="petshop-item">
-              <h3>Borris Johnson Squeaky Toy</h3>
-              <h3>$20.00</h3>
+              <h1 class="ItemName">Borris Johnson Squeaky Toy</h1>
+              <h1 class="ItemPrice">$20.00</h1>
               <h4>A squeky toy that looks like borris johnson, the prime minister of UK.</h4>
             </div>
           </div>
@@ -140,74 +144,75 @@
         <div class="cover-cat">
             <div class="cover-image">
                 <h1>Cats</h1>
-                <button class="petshop-cat-button" onclick="unhidecat()">Click here for more!</button>
+                <button class="petshop-cat-button" onclick="unhidecat('anchor-cat')">Click here for more!</button>
             </div>
           </div>
-          <div id="shop-container-cat">
+          <div id="shop-container-cat" style="display: none;" >
+            <a id="anchor-cat"></a>
           <div class="petshop-container">
             <div class="petshop-item-container">
-              <img src="images/cat toy.jpg" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/cat toy.jpg" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>Cat Scratching Post</h3>
-                <h3>$30.00</h3>
+                <h1 class="ItemName">Cat Scratching Post</h1>
+                <h1 class="ItemPrice">$30.00</h1>
                 <h4>A scratching post is a wooden post covered in rough material. Cats have a natural urge to scratch: the action helps them remove old material from their claws.</h4>
               </div>
             </div>
             <div class="petshop-item-container">
-              <img src="images/sushi squishy toys.jpg" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/sushi squishy toys.jpg" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>Sushi Themed Squish Toy</h3>
-                <h3>$16.00</h3>
+                <h1 class="ItemName">Sushi Themed Squish Toy</h1>
+                <h1 class="ItemPrice">$16.00</h1>
                 <h4>This encourages your little ones to pounce and fetch these 4 adorable sushi themed balls. Sharpening their animal insticts.</h4>
               </div>
             </div>
             <div class="petshop-item-container">
-              <img src="images/ciao sticks.jpg" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/ciao sticks.jpg" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>100pc of Ciao Sticks (Chicken)</h3>
-                <h3>$55.00</h3>
+                <h1 class="ItemName">100pc of Ciao Sticks (Chicken)</h1>
+                <h1 class="ItemPrice">$55.00</h1>
                 <h4>Ciao Stick is a tasty snack of jelly paste that helps to replenish the body of your cat of fluid loss.</h4>
               </div>
             </div>
             <div class="petshop-item-container">
-              <img src="images/cat kibble.png" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/cat kibble.png" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>Cat Kibble(2.4kg)</h3>
-                <h3>$27.70</h3>
+                <h1 class="ItemName">Cat Kibble(2.4kg)</h1>
+                <h1 class="ItemPrice">$27.70</h1>
                 <h4>For adult cats aged 1 year and over, Kit Cat Chicken Cuisine Dry Cat Food is a full and healthy premium diet. Vitamins & minerals, Omega 3 & 6 fatty acids, taurine, and yucca schidigera extract have been fortified with all Kit Cat Dry Cat Food.</h4>
               </div>
             </div>
             <div class="petshop-item-container">
-              <img src="images/litter box.jpg" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/litter box.jpg" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>Self Cleaning Cat Litter Box</h3>
-                <h3>$250.00</h3>
+                <h1 class="ItemName">Self Cleaning Cat Litter Box</h1>
+                <h1 class="ItemPrice">$250.00</h1>
                 <h4>This litter box has automatic scooping with a rake that removes waste for a clean, fresh start. It is designed for a single cat under 15 lb.</h4>
               </div>
             </div>
             <div class="petshop-item-container">
-              <img src="images/Cat bed.jpg" alt="">
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
+              <img src="images/Cat bed.jpg" alt="" class="ItemImage">
               <div class="petshop-item">
-                <h3>Deluxe Cat Bed</h3>
-                <h3>$120.00</h3>
+                <h1 class="ItemName">Deluxe Cat Bed</h1>
+                <h1 class="ItemPrice">$120.00</h1>
                 <h4>Made from high-quality tartan fabric and soft and warm velvet, complete with matching double-face cushion.</h4>
               </div>
             </div>
