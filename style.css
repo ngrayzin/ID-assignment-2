@@ -311,6 +311,11 @@ body{
         opacity: 1;
         border-radius: 0;
     }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
   }
   
   /* Style the counter cards */
@@ -426,13 +431,6 @@ body{
     opacity: 1 ;
 }
 
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-
-}
 
 .zoom {
     overflow: hidden;

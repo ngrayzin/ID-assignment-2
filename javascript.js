@@ -32,15 +32,10 @@ function unhidecat(){
         x.style.display = "none";
     }
 }
+
 const imageRandom = document.getElementById("imageRandom");
 
 
-
-  
-
-
-
-  
   var animallist = [];
   var doglist = [];
   var catlist = [];
@@ -249,6 +244,8 @@ const imageRandom = document.getElementById("imageRandom");
           })
 
         });
+
+
 $(document).ready(function(){
   fetch('animals.json')
   .then(response => response.json())
@@ -560,5 +557,5 @@ $(document).ready(function(){
           items.innerHTML += itemsTag[i];
       }
 
-  });*/
+  });
   }); */
