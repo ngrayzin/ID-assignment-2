@@ -34,13 +34,9 @@ function unhidecat(anchor){
     }
     document.location.href = "#"+anchor
 }
-<<<<<<< HEAD
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
-=======
-
-const imageRandom = document.getElementById("imageRandom");
->>>>>>> d7703e98b342a183b03bbeaf9576709424986cf2
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -53,6 +49,10 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+
+
+
 
 var list = []
 var breedlist = []
@@ -78,13 +78,6 @@ var urllist = []
                     catlist.push(animallist[0].animals[i])
                 }
             }
-            
-            
-           
-            for(i=0;i < doglist.length;i++)
-            {
-              
-            }
             console.log(breedlist)
             console.log(urllist)
             for(i=0;i < doglist.length;i++)
@@ -97,13 +90,13 @@ var urllist = []
                   var splitUrl = url.split('/');
                   var breed = splitUrl[4]
                   document.getElementById("dogcards").innerHTML += `
-                  <div class="card mb-3" style="max-width: 540px;margin-left:5%;flex: 2 1 100%;">
+                  <div class="card mb-3" style="max-width: 540px;flex: 2 1 100%;float:left;margin-right:5%">
                     <div class="row g-0 row-cols-1 row-cols-md-2 g-4">
                       <div class="col-md-4">
                         <img src="${url}" class="img-fluid" alt="dog image" style = "border-radius:5px 5px 5px 5px;height:230px;width:500px">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
+                        <div class="card-body" style = "text-align:left;">
                           <h5 class="card-title">${doglist[i].name}</h5>
                           <p class="card-text id = "b">gender: ${doglist[i].gender}</p>
                           <p class="card-text id = "b">breed: ${breed}</p>
@@ -196,13 +189,13 @@ $(document).ready(function(){
       {
         
         document.getElementById("catcards").innerHTML += `
-        <div class="card mb-3" style="max-width: 540px;margin-left:5%;flex: 2 1 100%;">
+        <div class="card mb-3" style="max-width: 540px;flex: 2 1 100%;float:left;margin-right:5%">
           <div class="row g-0 row-cols-1 row-cols-md-2 g-4">
             <div class="col-md-4">
               <img src=".." class="img-fluid" alt="cat image" style = "border-radius:5px 5px 5px 5px;height:100%;width:120%">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body" style = "text-align:left;">
                 <h5 class="card-title">${catlist[i].name}</h5>
                 <p class="card-text id = "b">gender: ${catlist[i].gender}</p>
                 <p class="card-text id = "b">breed: ${catlist[i].breeds.primary}</p>
@@ -293,7 +286,7 @@ $(document).ready(function(){
               <img src=".." class="img-fluid" alt="cat image" style = "border-radius:5px 5px 5px 5px;height:100%;width:120%">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body" style = "text-align:left;">
                 <h5 class="card-title">${catlist[0].name}</h5>
                 <p class="card-text id = "b">gender: ${catlist[0].gender}</p>
                 <p class="card-text id = "b">breed: ${catlist[0].breeds.primary}</p>
@@ -375,7 +368,7 @@ $(document).ready(function(){
               <img src=".." class="img-fluid" alt="dog image" style = "border-radius:5px 5px 5px 5px;height:100%;width:120%">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body" style = "text-align:left;">
                 <h5 class="card-title">${doglist[0].name}</h5>
                 <p class="card-text id = "b">gender: ${doglist[0].gender}</p>
                 <p class="card-text id = "b">breed: ${doglist[0].breeds.primary}</p>
