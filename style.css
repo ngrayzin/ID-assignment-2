@@ -610,3 +610,10 @@ input[type=number]{
     }
 
 }
+
+.quiz{
+    position: absolute;
+    border-radius: 25px 25px 25px 25px;width:80%;height: auto;background-color: rgba(214, 214, 214, 0.322);display: block;margin-top:5%;margin-left:10%;
+    font-family: 'Fuzzy Bubbles', cursive;
+
+}
