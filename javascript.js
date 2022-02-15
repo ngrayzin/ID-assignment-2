@@ -550,8 +550,7 @@ function quantityChanged(event){
 function addingToArray(event){
     var button =event.target
     var product = button.parentElement.parentElement.parentElement
-    var parent1 = product.parentElement
-    var parent2 = parent1.parentElement
+    console.log(product);
     console.log((product).getElementsByClassName("ItemName")[0].innerText)
     let addcartitems = {
         title: product.getElementsByClassName("ItemName")[0].innerText,//adding finding items to put into array
@@ -626,3 +625,7 @@ function addItemToCart(title,price,imageSrc){//adds that item to cart
     }total = Math.round((total*100) / 100)//makes the total 2 decimal
     document.getElementsByClassName('CartTotal')[0].innerText = "$" + total//shows the total
  }
+
+function hidebutton(){
+  console.log('hi')
+}
