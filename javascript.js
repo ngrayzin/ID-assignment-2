@@ -111,7 +111,7 @@ var urllist = []
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                  <form>
+                                <form>
                                   <!-- name -->
 
                                   <div id="first-last-name" class="mb-3">
@@ -163,17 +163,17 @@ var urllist = []
                                   <div id="button">
                                     <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                                   </div>
-                                  </form>
-                                </div>
+                                </form>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>`
-                  i++;
-                })
+                  </div>
+                </div>`
+                i++;
+              })
               }
 
             
