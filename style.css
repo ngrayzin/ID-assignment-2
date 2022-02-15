@@ -117,6 +117,7 @@ body{
 
 .content{
     z-index: 1;
+    position: inherit;
 }
 
 
@@ -523,4 +524,89 @@ input[type=number]{
     border-radius: 15px;
     background-color: white;
     color: black;
+}
+.collapsible {
+    background-color: #4e54c8;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .a, .collapsible:hover {
+    background-color: blue;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .a:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .box1{
+    border-radius: 25px 25px 25px 25px;width:60%;height: auto;background-color: white;display: block;margin-left:5%;margin-top:4%;float:left
+  }
+  .box2{
+    border-radius: 25px 25px 25px 25px;width:30%;height: auto;background-color: white;margin-left:67%;margin-top:4.6%;
+  }
+
+  .boxy{
+    font-family: 'Fuzzy Bubbles', cursive;color: #4e54c8;
+  }
+  @media only screen and (max-width: 850px) {
+      .box1{
+          width:80%;
+          margin:auto;
+          float:none;
+          margin-bottom: 5%;
+      }
+      .box2{
+        width :80%;
+        margin:auto;
+      }
+      .footer{
+          margin: auto;
+          clear:both;
+      }
+      .boxy{
+          padding-top:10%;
+      }
+    
+  }
+
+  p.font{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .footer {
+    clear: both;
+    position: relative;
+}
+
+@media only screen and (max-width: 1200px) {
+    .shopbut{
+        display: none;
+    }
+    .form-control{
+        width:100%;
+    }
+
 }
