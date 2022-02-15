@@ -453,6 +453,78 @@ body{
     transform: scale(1.5);
 }
 
+.donation-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.donation-content{
+    width: 45%;
+    margin: 30px;
+    text-align: center;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+}
+
+.donation-tier-container{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 30px;
+    width: 45%;
+}
+
+.donation-frequency{
+    text-align: center;
+}
+
+.donation-frequency button{
+    width: 200px;
+    height: 60px;
+}
+
+.donation-amount-container{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.donation-amount button{
+    width: 150px;
+    height: 60px;
+    margin: 10px;
+}
+
+input[type=number]{
+    border:3px solid #555;
+    height: 60px;
+    min-width: 150px;
+    font-size: 30px;
+}
+
+.checkout button{
+    width: 100%;
+    font: 30px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.donation-receipt{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.donation-receipt button{
+    width: 20%;
+    font: 30px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
 .collapsible {
     background-color: #4e54c8;
     color: white;

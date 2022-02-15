@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet Adoption Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid navheader">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a href="index.html">
+              <img src="images/Heart paw.png" alt="Logo" width="65" height="60" style="border: black;" class="d-inline-block align-text-top">
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="pills-tab">
+                <li class="nav-item">
+                  <a class="nav-link" style="margin: 20px; font-size: 30px;" href="index.html">Home</a>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" style="margin-top: 20px; margin-left: 20px; margin-right: 20px; font-size: 30px;" href="#" data-bs-toggle="dropdown">Pets </a>
+                 <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="Dogs.html"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a>
+                   </li>
+                  <li>
+                    <a class="dropdown-item" href="Cats.html"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a>
+                   </li>
+                 </ul>
+             </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px; background-color: lightblue;" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;">Services</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" style="margin: 20px;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" style="margin: 20px;" type="submit">Search</button>
+            </form>
+            <img src="images/Cart.png" style="width:60px; height:60px; margin: 20px;" alt="">
+          </div>
+        </div>
+      </nav>
+      <div class="donation-container">
+          <div class="donation-content">
+              <img src="images/Dog shelter.jpg" style="width: 100%;" alt="">
+              <h1>What this money will go towards?</h1>
+              <p>The money that you graciously donated will go towards providing shelter, food, and medical neccessities for these poor animals. It will also go towards spreading awareness of the adoption and why it should be favoured by those wanting to get pets.</p>
+          </div>
+          <div class="donation-tier-container">
+              <div class="donation-frequency">
+                  <button style="margin-right: -6px;" onclick="hidebutton()">Monthly Donation</button>
+                  <button>One-Time Donation</button>
+              </div>
+              <div class="donation-amount-container">
+                  <div class="donation-amount">
+                      <br>
+                      <br>
+                      <button>$10</button>
+                      <button>$20</button>
+                      <button>$40</button>
+                      <button>$80</button>
+                      <button>$160</button>
+                      <button>$200</button>
+                  </div>
+              </div>
+              <br>
+              <br>
+              <input type="number" id="customamt" name="customamt" min="1" step="any" placeholder="Enter custom amount to be donated">
+              <br>
+              <br>
+              <div class="checkout">
+                <button>Checkout</button>
+              </div>
+          </div>
+      </div>
+      <div class="donation-receipt">
+          <h1>Donation Acknowledgement Form</h1>
+          <p>If you made a monetary donation, please request for a receipt within 14 days of the transaction. As we are experiencing an influx of enquiries, do grant our volunteer team some time to acknowledge your donation and/or issue a receipt.</p>
+          <button>Submit Here</button>
+      </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascript.js"></script> 
+  </body>
+</html
