@@ -334,6 +334,10 @@ fetch('animals.json')
       });
     });
   });
+  window.addEventListener("load", function () {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden"; // class "loader hidden"
+  });
   /*const shopSearchInput = document.querySelector(".myinputdog");
   shopSearchInput.addEventListener("keyup", event => {
       document.getElementById(dogcards).innerHTML = "";

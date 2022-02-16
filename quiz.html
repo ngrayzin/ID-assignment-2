@@ -54,14 +54,15 @@
         <section class = "quiz">
             <h1 style = "text-align: center;">Am I Ready to Adopt a Pet?</h1>
             <div id="frame001">
-                <div id="font001">
-                    <h2>True Or False Quiz</h2><text>Question: <text id="number001">0</text></text><br />
+                <div id="font001" style = "text-align: center;">
+                    <text>Question: <text id="number001">0</text></text><br />
                     <text>Score: <text id="score001">0</text></text>
                     <hr />
                     <div id="disappear001">
-                        <button class="buttons002" onclick="begin001()">Begin</button>
+                        <img src = "images/nyancat.gif" style = "width:40%;height:auto;"><br><br>
+                        <button type="button" class="buttons002" style = "font-family: 'Fuzzy Bubbles', cursive;" onclick="begin001()">Begin</button>
                     </div>
-                    <p id="message001"></p>
+                    <p id="message001" style = "font-size: 20px;"></p>
                     <p id="message002"></p>
                     <p id="message003"></p>
                     <p id="message004"></p>
@@ -71,30 +72,30 @@
 
 
     </div>
-        <div class = "area">
-            <ul class="circles">
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
-                    <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
-            </ul>
-        </div>
+    <div class = "area" style = "height: 137vh;">
+        <ul class="circles">
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+        </ul>
+    </div>
         <script>
             var question001 = ["You’ve just adopted a new pet! You should put an ID tag on your pet as soon as possible.",
                     "You shouldn’t set up your pet's living space until you bring him or her home.",
@@ -152,7 +153,7 @@
                 }
         
                 function q2i() {
-                    message003.innerHTML = "Incorrect. Introducing your new fur kid to their living area right away will help them get used to their new environment. Pet-proof and set up a comfy bed or crate ahead of time.";
+                    message003.innerHTML = "Incorrect.<br> Introducing your new fur kid to their living area right away will help them get used to their new environment. Pet-proof and set up a comfy bed or crate ahead of time.";
                     message002.innerHTML = "";
                     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
                 }
@@ -165,7 +166,7 @@
                 }
         
                 function q3i() {
-                    message003.innerHTML = "Incorrect. Newly adopted pets need time to settle into their new homes. Introduce them to new humans slowly and start with only one new person at a time.";
+                    message003.innerHTML = "Incorrect.<br> Newly adopted pets need time to settle into their new homes. Introduce them to new humans slowly and start with only one new person at a time.";
                     message002.innerHTML = "";
                     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
                 }
@@ -223,7 +224,7 @@
                 }
         
                 function q8c() {
-                    message003.innerHTML = "Correct. Although a warm forehead might indicate that a human has a fever, a warm nose just means that, well, your cat has a warm nose! A cat’s regular body temperature is between 100.5 and 102.5 degrees Fahrenheit. Any higher (or lower) is a reason for your cat to see a veterinarian. And, the most accurate way to determine your cat’s temperature is to take it rectally, using a quick-read digital thermometer.";
+                    message003.innerHTML = "Correct.<br>Although a warm forehead might indicate that a human has a fever, a warm nose just means that, well, your cat has a warm nose! A cat’s regular body temperature is between 100.5 and 102.5 degrees Fahrenheit. Any higher (or lower) is a reason for your cat to see a veterinarian. And, the most accurate way to determine your cat’s temperature is to take it rectally, using a quick-read digital thermometer.";
                     message002.innerHTML = "";
                     score001.innerHTML = b++;
                     message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
@@ -252,7 +253,7 @@
                     message003.innerHTML = "Correct!<br> Always take care of your pet :)";
                     message002.innerHTML = "";
                     score001.innerHTML = b++;
-                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>See Results!</button>";
                 }
         
                 function q10i() {
@@ -333,10 +334,28 @@
                         number001.innerHTML = a++;
                         message004.innerHTML = "";
                     } else {
-                        message001.innerHTML = "End of Quiz";
                         message002.innerHTML = "";
                         message003.innerHTML = "";
-                        message004.innerHTML = "<button class=buttons002 onclick=repeat001()>Repeat</button>";
+                        if(b < 5){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3903569/original_tireddog.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>Oh no.<br>Nobody is perfect. Make sure you do your pet diligence before you think about adopting!<br><button class = "buttons002" onclick = "window.location.href='Info.html'"  style = "font-family: 'Fuzzy Bubbles', cursive;">Read more about pets!</button>
+                            `
+                        }
+                        if(b >= 5 && b < 8){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3827714/original_jack_20russell_20puppy.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>You’re almost ready!<br>Raising a pet is hard work. Keep working on your pet smarts, and you’ll be ready to bring home your new fur kid in no time!<br><button class = "buttons002" onclick = "window.location.href='Info.html'"  style = "font-family: 'Fuzzy Bubbles', cursive;">Read more about pets!</button>
+                            `
+
+                        }
+                        if(b > 8){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3826852/original_puppapoo.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>High paw!<br>You’ve got plenty of warm cuddles ahead with your new pet! Way to go!<br><button class = "buttons002" onclick = "window.location.href='Index.html'" style = "font-family: 'Fuzzy Bubbles', cursive;">Back to home</button>
+                            `
+                        }
+                        message004.innerHTML = "<button class=buttons002 onclick=repeat001() onclick=window.scrollTo(0, 0); style = font-family: 'Fuzzy Bubbles', cursive;>Repeat</button>";
                     }
                 }
         
