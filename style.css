@@ -995,7 +995,6 @@ input[type=number]{
 }
 
 .loader.hidden {
-    if()
     animation: fadeOut 1s;
     animation-fill-mode: forwards;
 }
