@@ -486,9 +486,9 @@ fetch('animals.json')
       const loader = document.querySelector(".loader");
       loader.className += " hidden"; // class "loader hidden"
   });
-$("#modalbtn").on("click", function (e) {
+$("#contact_form").on("submit", function (e) {
   e.preventDefault();
-
+  alert("its working");
   let contactName = $("#name").val();
   let contactGender = $("#gender").val();
   let contactAdress = $("#address1").val();

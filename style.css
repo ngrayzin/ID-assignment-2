@@ -767,6 +767,7 @@ input[type=number]{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: 10s
     
 }
 
@@ -775,6 +776,7 @@ input[type=number]{
 }
 
 .loader.hidden {
+    if()
     animation: fadeOut 1s;
     animation-fill-mode: forwards;
 }
