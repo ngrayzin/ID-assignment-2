@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body onload="Spinthewheel()">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid navheader">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"  style = "max-width: 1100px;">
@@ -40,14 +40,16 @@
                 <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px; background-color: lightblue;" href="shop.html">Shop</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="margin: 20px; font-size: 30px;">Services</a>
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Donation.html">Services</a>
               </li>
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" style="margin: 20px;" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success shopbut" style="margin: 20px;" type="submit">Search</button>
             </form>
-            <img src="images/Cart.png" style="width:60px; height:60px; margin: 20px;" alt="">
+            <a href="checkout.html">
+              <img src="images/Cart.png" style="width:60px; height:60px; margin: 20px;" alt="" onclick="addToCartClicked()">
+            </a>
           </div>
         </div>
       </nav>
@@ -63,6 +65,14 @@
         </div>
       </div>
       </div>
+      <div class="STW">
+        <div class="app">
+          <img class="STW-Marker" src="images/STW Marker.png" alt="">
+          <img class="STW-Wheel" src="images/STW Wheel.png" alt="">
+          <img class="STW-Button" src="images/STW button.png" alt="">
+          <div class="STW-Display">-</div>
+        </div>
+      </div>
       <div class="cover-dog">
         <div class="cover-image">
             <h1>Dogs</h1>
@@ -76,7 +86,7 @@
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/dog toy.jpg" alt="" class="ItemImage">
+            <img class="ItemImage" src="images/dog toy.jpg" alt="">
               <div class="petshop-item">
                 <h1 class="ItemName">Duck Dog Squeaky Toy</h1>
                 <h1 class="ItemPrice">$5.00</h1>
@@ -87,7 +97,7 @@
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/Dog bed.jpg" alt="" class="ItemImage">
+            <img class="ItemImage" src="images/Dog bed.jpg" alt="">
             <div class="petshop-item">
               <h1 class="ItemName">Cotton Dog Bed</h1>
               <h1 class="ItemPrice">$40.00</h1>
@@ -98,7 +108,7 @@
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/dog treats.jpg" alt="" class="ItemImage">
+            <img class="ItemImage" src="images/dog treats.jpg" alt="">
             <div class="petshop-item">
               <h1 class="ItemName">Dog Treats of all flavours (2 of each)</h1>
               <h1 class="ItemPrice">$30.00</h1>
@@ -109,7 +119,7 @@
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/anti choking bowl.jfif" alt="" class="ItemImage">
+            <img  class="ItemImage" src="images/anti choking bowl.jfif" alt="">
             <div class="petshop-item">
               <h1 class="ItemName">Anti-Choking-Dog Bowl</h1>
               <h1 class="ItemPrice">$25.00</h1>
@@ -120,7 +130,7 @@
             <div class="image-overlay">
               <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/dog kibble.jpg" alt="" class="ItemImage">
+            <img class="ItemImage" src="images/dog kibble.jpg" alt="">
             <div class="petshop-item">
               <h1 class="ItemName">Dog Kibble (Grilled Steak and Vegetable 15Kg)</h1>
               <h1 class="ItemPrice">$250.00</h1>
@@ -129,9 +139,9 @@
           </div>
           <div class="petshop-item-container">
             <div class="image-overlay">
-              <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
+              <button class="buynowbutton" onclick="addToCartClicked()"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
             </div>
-            <img src="images/borris johnson chew.jfif" alt="" class="ItemImage">
+            <img class="ItemImage" src="images/borris johnson chew.jfif" alt="">
             <div class="petshop-item">
               <h1 class="ItemName">Borris Johnson Squeaky Toy</h1>
               <h1 class="ItemPrice">$20.00</h1>
@@ -154,7 +164,7 @@
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
-              <img src="images/cat toy.jpg" alt="" class="ItemImage">
+              <img class="ItemImage" src="images/cat toy.jpg" alt="">
               <div class="petshop-item">
                 <h1 class="ItemName">Cat Scratching Post</h1>
                 <h1 class="ItemPrice">$30.00</h1>
@@ -165,7 +175,7 @@
               <div class="image-overlay">
                 <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
-              <img src="images/sushi squishy toys.jpg" alt="" class="ItemImage">
+              <img class="ItemImage" src="images/sushi squishy toys.jpg" alt="">
               <div class="petshop-item">
                 <h1 class="ItemName">Sushi Themed Squish Toy</h1>
                 <h1 class="ItemPrice">$16.00</h1>
@@ -173,14 +183,14 @@
               </div>
             </div>
             <div class="petshop-item-container">
-              <div class="image-overlay">
-                <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
-              </div>
-              <img src="images/ciao sticks.jpg" alt="" class="ItemImage">
+              <img  class="ItemImage" src="images/ciao sticks.jpg" alt="">
               <div class="petshop-item">
                 <h1 class="ItemName">100pc of Ciao Sticks (Chicken)</h1>
                 <h1 class="ItemPrice">$55.00</h1>
                 <h4>Ciao Stick is a tasty snack of jelly paste that helps to replenish the body of your cat of fluid loss.</h4>
+              </div>
+              <div class="image-overlay">
+                <button class="buynowbutton"><span class='text'>Add to cart</span><span class="icon"><img src="images/Cart.png" style="width: 40px; height: 40px;" alt=""></span></button>
               </div>
             </div>
             <div class="petshop-item-container">
@@ -219,7 +229,6 @@
           </div>
         </div>
     </div>
-      
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascript.js"></script> 
   </body>

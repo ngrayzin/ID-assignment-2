@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body onload="Donation()">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid navheader">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,19 +59,27 @@
           </div>
           <div class="donation-tier-container">
               <div class="donation-frequency">
-                  <button style="margin-right: -6px;" onclick="hidebutton()">Monthly Donation</button>
-                  <button>One-Time Donation</button>
+                  <input type="radio" name="Donation-Freq" id="Freq-One-Time" value="One-Time" onclick="Donation()">
+                  <label for="Freq-One-Time">One-Time</label>
+                  <input type="radio" name="Donation-Freq" id="Freq-Monthly" value="Monthly">
+                  <label for="Freq-Monthly">Monthly</label>
               </div>
               <div class="donation-amount-container">
                   <div class="donation-amount">
                       <br>
                       <br>
-                      <button>$10</button>
-                      <button>$20</button>
-                      <button>$40</button>
-                      <button>$80</button>
-                      <button>$160</button>
-                      <button>$200</button>
+                      <input type="radio" name="Donation-amt" id="ten" value="ten">
+                      <label for="ten">$10</label>
+                      <input type="radio" name="Donation-amt" id="twenty" value="twenty">
+                      <label for="twenty">$20</label>
+                      <input type="radio" name="Donation-amt" id="fourty" value="fourty">
+                      <label for="fourty">$40</label>
+                      <input type="radio" name="Donation-amt" id="eighty" value="eighty">
+                      <label for="eighty">$80</label>
+                      <input type="radio" name="Donation-amt" id="hundredandsixty" value="hundredandsixty">
+                      <label for="hundredandsixty">$160</label>
+                      <input type="radio" name="Donation-amt" id="twohundred" value="twohundred">
+                      <label for="twohundred">$200</label>
                   </div>
               </div>
               <br>
