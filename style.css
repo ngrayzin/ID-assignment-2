@@ -117,14 +117,13 @@ body{
 
 .content{
     z-index: 1;
-    position: inherit;
+
 }
 
 
 
 
 .area{
-    display: block;
     background: #4e54c8;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
@@ -744,6 +743,19 @@ input[type=number]{
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    #catcards{
+        display: block;
+        padding-left: 15%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #catcards{
+        display: block;
+        padding-right: 15%;
+    }
+}
+
 .loader {
     position: fixed;
     z-index: 99;
@@ -751,10 +763,11 @@ input[type=number]{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.493);
+    background: #84CEFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .loader > img {
@@ -762,7 +775,6 @@ input[type=number]{
 }
 
 .loader.hidden {
-    animation-duration: 6s;
     animation: fadeOut 1s;
     animation-fill-mode: forwards;
 }

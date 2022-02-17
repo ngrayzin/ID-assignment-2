@@ -75,8 +75,6 @@ fetch('animals.json')
               catlist.push(animallist[0].animals[i])
           }
       }
-      console.log(breedlist)
-      console.log(urllist)
       if(document.getElementById("dogcards") != null){
         for(i=0;i < doglist.length;i++)
         {
@@ -84,8 +82,6 @@ fetch('animals.json')
           const data_2 = await response.json();
           const aresponse = await fetch('https://randomuser.me/api/');
           const adata = await aresponse.json();
-          console.log(adata.results[0].name.first)
-          console.log(adata.results[0].gender)
           list.push(data_2);
           var url = data_2.message;
           var splitUrl = url.split('/');
@@ -104,14 +100,11 @@ fetch('animals.json')
                             <p class="card-text id = "b">breed: ${breed}</p>
                             <p class="card-text id = "b">description: ${adata.results[0].name.first} is an amazing dog</p>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
-                            
-                            </div>
+                            <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button> 
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                 </aside>`;
           }
       }
@@ -138,7 +131,7 @@ fetch('animals.json')
                     <p class="card-text id = "b">breed: ${catlist[i].breeds.primary}</p>
                     <p class="card-text id = "b">description: ${adata.results[0].name.first} is an amazing cat</p>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
+                    <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button>
                   </div>
                 </div>
               </div>
@@ -163,7 +156,7 @@ fetch('animals.json')
                   <p class="card-text id = "b">breed: ${catlist[4].breeds.primary}</p>
                   <p class="card-text id = "b">description: ${catlist[4].name} is an amazing cat</p>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
+                  <button type="button" class="btn btn-primary" onclick = "myfunction3()" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -172,7 +165,7 @@ fetch('animals.json')
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form>
+                          <form  id = "contact_form" onsubmit="myfunction()">
                           <!-- name -->
 
                           <div id="first-last-name" class="mb-3">
@@ -245,7 +238,7 @@ fetch('animals.json')
                   <p class="card-text id = "b">breed: ${doglist[0].breeds.primary}</p>
                   <p class="card-text id = "b">description: ${doglist[0].name} is an amazing dog</p>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
+                  <button type="button" onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -254,7 +247,7 @@ fetch('animals.json')
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form>
+                          <form  id = "contact_form" onsubmit="myfunction()">
                           <!-- name -->
 
                           <div id="first-last-name" class="mb-3">
@@ -318,6 +311,161 @@ fetch('animals.json')
         `
       } 
   });
+
+  function myfunction2(){
+    document.getElementById("modalbody").innerHTML = `
+    <form id = "contact_form" onsubmit="myfunction()">
+      <!-- name -->
+
+      <div id="first-last-name" class="mb-3">
+        <label class="main-label" id="name-label">First Name: </label>
+        <input type="text" id="name" placeholder="John" required><br><br>
+  
+        <label class="main-label">Last Name: </label>
+        <input type="text" id="lastName" placeholder="Smith" required>
+      </div>
+  
+      <!-- gender -->
+      <div id="gender" class="mb-3">
+        <input type="radio" id="male" name="gender" value="1" required>
+        <label class="main-label" for="male">Male</label>
+  
+        <input type="radio" id="female" name="gender" value="2" required>
+        <label class="main-label" for="female">Female</label>
+      </div>
+      <!-- address  -->
+      <div id="address" class="mb-3">
+        <label class="main-label" for="address1">Address: </label>
+        <input type="text" id="address1" size="30" placeholder="Enter your address here"><br><br>
+
+
+        <label class="main-label" for="town">Town: </label>
+        <input type="text" id="town" size="15" placeholder="Your town">
+
+        <label class="main-label" for="postcode">Postcode: </label>
+        <input type="text" id="postcode" size="10" placeholder="Postcode"><br><br>
+
+      </div>
+
+      <!-- email / phone / age -->
+
+      <div id="email-phone" class="mb-3">
+        <label class="main-label" id="phone-label" for="phone">Phone: </label>
+        <input type="tel" id="phone" placeholder="e.g. +44 7675 403 665"><br><br>
+
+        <label class="main-label" id="email-label" for="email">Email: </label>
+        <input type="email" id="email" placeholder="e.g. youremail@example.co.uk" required size="35">
+
+      </div>
+        
+      <div class="mb-3">
+        <label for="message-text" class="col-form-label">Short paragraph on why you want to adopt this pet:</label>
+        <textarea class="form-control" id="message-text"></textarea>
+      </div>
+      <!-- submit button -->
+      <div id="button">
+        <button id = "modalbtn"class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    
+    `
+  }
+  var check = false
+  function myfunction(){
+    document.getElementById("exampleModal").innerHTML = `
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Adoption form</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style = "margin:15%;text-align:center;">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_5l7g7pwp.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"    autoplay></lottie-player>
+            <b>Your response is recorded!<br>Please wait for an email to be send to you for more information.</b>
+          </div>
+          <div class="modal-footer">
+            <button onclick = "check = true" data-bs-dismiss="modal" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    ` 
+    return check;
+  }
+
+  function myfunction3(check){
+    if(check = true){
+      document.getElementById("exampleModal").innerHTML = `
+      <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Adoption form</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id = "contact_form" onsubmit="myfunction()">
+                    <!-- name -->
+
+                    <div id="first-last-name" class="mb-3">
+                      <label class="main-label" id="name-label">First Name: </label>
+                      <input type="text" id="name" placeholder="John" required><br><br>
+                
+                      <label class="main-label">Last Name: </label>
+                      <input type="text" id="lastName" placeholder="Smith" required>
+                    </div>
+                
+                    <!-- gender -->
+                    <div id="gender" class="mb-3">
+                      <input type="radio" id="male" name="gender" value="1" required>
+                      <label class="main-label" for="male">Male</label>
+                
+                      <input type="radio" id="female" name="gender" value="2" required>
+                      <label class="main-label" for="female">Female</label>
+                    </div>
+                    <!-- address  -->
+                    <div id="address" class="mb-3">
+                      <label class="main-label" for="address1">Address: </label>
+                      <input type="text" id="address1" size="30" placeholder="Enter your address here"><br><br>
+
+
+                      <label class="main-label" for="town">Town: </label>
+                      <input type="text" id="town" size="15" placeholder="Your town">
+
+                      <label class="main-label" for="postcode">Postcode: </label>
+                      <input type="text" id="postcode" size="10" placeholder="Postcode"><br><br>
+
+                    </div>
+
+                    <!-- email / phone / age -->
+
+                    <div id="email-phone" class="mb-3">
+                      <label class="main-label" id="phone-label" for="phone">Phone: </label>
+                      <input type="tel" id="phone" placeholder="e.g. +44 7675 403 665"><br><br>
+
+                      <label class="main-label" id="email-label" for="email">Email: </label>
+                      <input type="email" id="email" placeholder="e.g. youremail@example.co.uk" required size="35">
+
+                    </div>
+                      
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Short paragraph on why you want to adopt this pet:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                    <!-- submit button -->
+                    <div id="button">
+                      <button type="submit" id = "modalbtn"class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+      `
+    }
+    
+
+  }
+ 
   $(document).ready(function(){
     $("#myinputdog").on("keyup", function() {
       var value = $(this).val().toLowerCase();
@@ -338,6 +486,20 @@ fetch('animals.json')
       const loader = document.querySelector(".loader");
       loader.className += " hidden"; // class "loader hidden"
   });
+$("#modalbtn").on("click", function (e) {
+  e.preventDefault();
+
+  let contactName = $("#name").val();
+  let contactGender = $("#gender").val();
+  let contactAdress = $("#address1").val();
+  let contactTown = $("#town").val();
+  let contactPostCode = $("#postcode").val();
+  let contactPhone = $("#phone").val();
+  let contactEmail = $("#email").val();
+  let contactMessage = $("#message-text").val();
+  console.log(contactName,contactGender,contactAdress,contactTown,contactPostCode,contactPhone,contactEmail,contactMessage)
+})
+
   /*const shopSearchInput = document.querySelector(".myinputdog");
   shopSearchInput.addEventListener("keyup", event => {
       document.getElementById(dogcards).innerHTML = "";

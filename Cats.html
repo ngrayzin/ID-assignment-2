@@ -47,6 +47,10 @@
           </div>
         </div>
       </nav>
+      <div class="loader">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_yefgzddc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+      </div>
 
       <form class="d-flex" style = "width:80%;margin:auto;padding-top:5%;padding-bottom: 5%;">
         <input id = "myinputcat" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -61,7 +65,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id = "contact_form" onsubmit="myfunction()">
                 <!-- name -->
 
                 <div id="first-last-name" class="mb-3">
@@ -111,7 +115,7 @@
                 </div>
                 <!-- submit button -->
                 <div id="button">
-                  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                  <button id="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
               </div>
