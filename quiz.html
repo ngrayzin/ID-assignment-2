@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet Adoption Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="context">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid navheader">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a href="index.html">
+                <img src="images/Heart paw.png" alt="Logo" width="65" height="60" style="border: black;" class="d-inline-block align-text-top">
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="pills-tab">
+                    <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px; background-color: lightblue;" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" style="margin-top: 20px; margin-left: 20px; margin-right: 20px; font-size: 30px;" href="#" data-bs-toggle="dropdown">Pets </a>
+                    <ul class="dropdown-menu">
+                    <li>
+                    <a class="dropdown-item" href="Dogs.html"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a>
+                    </li>
+                    <li>
+                    <a class="dropdown-item" href="Cats.html"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a>
+                    </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Info.html">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;">Services</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" style="margin: 20px;" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" style="margin: 20px;" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+        <section class = "quiz">
+            <h1 style = "text-align: center;">Am I Ready to Adopt a Pet?</h1>
+            <div id="frame001">
+                <div id="font001" style = "text-align: center;">
+                    <text>Question: <text id="number001">0</text></text><br />
+                    <text>Score: <text id="score001">0</text></text>
+                    <hr />
+                    <div id="disappear001">
+                        <img src = "images/nyancat.gif" style = "width:40%;height:auto;"><br><br>
+                        <button type="button" class="buttons002" style = "font-family: 'Fuzzy Bubbles', cursive;" onclick="begin001()">Begin</button>
+                    </div>
+                    <p id="message001" style = "font-size: 20px;"></p>
+                    <p id="message002"></p>
+                    <p id="message003"></p>
+                    <p id="message004"></p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    <div class = "area" style = "height: 137vh;">
+        <ul class="circles">
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Cat cartoon.png" style = "width:80%;height:auto;"></li>
+                <li><img src = "images/Dog cartoon.png" style = "width:80%;height:auto;"></li>
+        </ul>
+    </div>
+        <script>
+            var question001 = ["You’ve just adopted a new pet! You should put an ID tag on your pet as soon as possible.",
+                    "You shouldn’t set up your pet's living space until you bring him or her home.",
+                    "Once you bring home your adopted dog, introduce them to as many people as possible right away.",
+                    "You might not see your pet’s full personality right away.",
+                    "You should wait a few weeks before training your pet.",
+                    "Your new dog should be confined to one room at all times.",
+                    "It’s okay for your pet to have housetraining accidents.",
+                    "You can tell a cat has a fever if he/she has a warm, dry nose.",
+                    "Dry cat food(KIBBLE) is good for cats becauseit keeps their teeth clean.",
+                    "I should always be responsible for my own pet."
+                ];
+        
+                var options001 = ["<button class=buttons001 onclick=q1c()>True</button><br /><br /><button class=buttons001 onclick=q1i()>False</button>"];
+                var options002 = ["<button class=buttons001 onclick=q2i()>True</button><br /><br /><button class=buttons001 onclick=q2c()>False</button>"];
+                var options003 = ["<button class=buttons001 onclick=q3i()>True</button><br /><br /><button class=buttons001 onclick=q3c()>False</button>"];
+                var options004 = ["<button class=buttons001 onclick=q4c()>True</button><br /><br /><button class=buttons001 onclick=q4i()>False</button>"];
+                var options005 = ["<button class=buttons001 onclick=q5i()>True</button><br /><br /><button class=buttons001 onclick=q5c()>False</button>"];
+                var options006 = ["<button class=buttons001 onclick=q6i()>True</button><br /><br /><button class=buttons001 onclick=q6c()>False</button>"];
+                var options007 = ["<button class=buttons001 onclick=q7c()>True</button><br /><br /><button class=buttons001 onclick=q7i()>False</button>"];
+                var options008 = ["<button class=buttons001 onclick=q8i()>True</button><br /><br /><button class=buttons001 onclick=q8c()>False</button>"];
+                var options009 = ["<button class=buttons001 onclick=q9i()>True</button><br /><br /><button class=buttons001 onclick=q9c()>False</button>"];
+                var options010 = ["<button class=buttons001 onclick=q10c()>True</button><br /><br /><button class=buttons001 onclick=q10i()>False</button>"];
+        
+                var a = 0;
+                a++;
+                var b = 0;
+                b++;
+        
+                function begin001() {
+                    disappear001.innerHTML = "";
+                    message001.innerHTML = question001[0];
+                    message002.innerHTML = options001;
+                    number001.innerHTML = a++;
+                }
+        
+                function q1c() {
+                    message003.innerHTML = "Correct!<br> You’ve just adopted a new pet! You should put an ID tag on your pet as soon as possible.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q1i() {
+                    message003.innerHTML = "Incorrect.<br> Accidents can happen. Your dog should wear an ID tag with your phone number on it as soon as possible for safety reasons.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q2c() {
+                    message003.innerHTML = "Correct!<br> Your pet’s change in environment might stress them out. The sooner they get comfortable in their new living area, the easier their transition will be!";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q2i() {
+                    message003.innerHTML = "Incorrect.<br> Introducing your new fur kid to their living area right away will help them get used to their new environment. Pet-proof and set up a comfy bed or crate ahead of time.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q3c() {
+                    message003.innerHTML = "Correct!<br> Socializing your new pet is important, but they will have an easier time settling in if they're calm. Start by limiting them to only one new person a day.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q3i() {
+                    message003.innerHTML = "Incorrect.<br> Newly adopted pets need time to settle into their new homes. Introduce them to new humans slowly and start with only one new person at a time.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q4c() {
+                    message003.innerHTML = "Correct!<br>Newly adopoted pets can be nervous about moving into a new home. Be patient—you'll get a better idea of their true personality with time!";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q4i() {
+                    message003.innerHTML = "Incorrect.<br> Newly adopoted pets usually need varying amounts of time to get used to their new home before their true personality comes out.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q5c() {
+                    message003.innerHTML = "Correct! <br>Start training your pet right away. Get off on the right paw by keeping them on a consistent schedule and teaching them boundaries with positive reinforcement.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q5i() {
+                    message003.innerHTML = "Incorrect. <br> Training should start right away. The sooner you teach them what is and isn’t acceptable through positive reinforcement, the quicker (and easier!) they’ll learn.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q6c() {
+                    message003.innerHTML = "Correct!<br>Dogs are naturally curious and will need to explore their new surroundings to get comfortable. Just be sure to supervise!";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q6i() {
+                    message003.innerHTML = "Incorrect. <br>Your dog is naturally curious and should be able to explore their surroundings to get comfortable. Just be sure to supervise them as they investigate.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q7c() {
+                    message003.innerHTML = "Correct!<br>It will take your new pet time to get used to their new routine. Be patient as they settle into their new home.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q7i() {
+                    message003.innerHTML = "Incorrect. <br> Young pets and even adult pets aren’t perfect. Be patient as your pet learns their new routine and use positive reinforcement to help them along.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q8c() {
+                    message003.innerHTML = "Correct.<br>Although a warm forehead might indicate that a human has a fever, a warm nose just means that, well, your cat has a warm nose! A cat’s regular body temperature is between 100.5 and 102.5 degrees Fahrenheit. Any higher (or lower) is a reason for your cat to see a veterinarian. And, the most accurate way to determine your cat’s temperature is to take it rectally, using a quick-read digital thermometer.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q8i() {
+                    message003.innerHTML = "Incorrect.<br> Although a warm forehead might indicate that a human has a fever, a warm nose just means that, well, your cat has a warm nose! A cat’s regular body temperature is between 100.5 and 102.5 degrees Fahrenheit. Any higher (or lower) is a reason for your cat to see a veterinarian. And, the most accurate way to determine your cat’s temperature is to take it rectally, using a quick-read digital thermometer.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q9c() {
+                    message003.innerHTML = "Correct!<br>Dry cat food isn’t any better at cleaning your cat’s teeth than cookies and potato chips are at cleaning ours! What’s more, from a nutritional standpoint, kibble is the worst food you can feed because it often contains high carbohydrates and lacks the valuable moisture that cats need in their diets to stay healthy. If you want to keep your cat’s teeth clean, brush his teeth with a cat-safe toothpaste or use a dental cleaning additive that you add to his food or water and have your cat’s teeth cleaned by the veterinarian, if necessary.";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q9i() {
+                    message003.innerHTML = "Incorrect.<br>Dry cat food isn’t any better at cleaning your cat’s teeth than cookies and potato chips are at cleaning ours! What’s more, from a nutritional standpoint, kibble is the worst food you can feed because it often contains high carbohydrates and lacks the valuable moisture that cats need in their diets to stay healthy. If you want to keep your cat’s teeth clean, brush his teeth with a cat-safe toothpaste or use a dental cleaning additive that you add to his food or water and have your cat’s teeth cleaned by the veterinarian, if necessary.";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>Next</button>";
+                }
+        
+                function q10c() {
+                    message003.innerHTML = "Correct!<br> Always take care of your pet :)";
+                    message002.innerHTML = "";
+                    score001.innerHTML = b++;
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>See Results!</button>";
+                }
+        
+                function q10i() {
+                    message003.innerHTML = "Incorrect. <br> You adopted him/her. You should love him/her and take care of it. ";
+                    message002.innerHTML = "";
+                    message004.innerHTML = "<button class=buttons002 onclick=next001()>See Results!</button>";
+                }
+        
+                function next001() {
+                    if (a == "2") {
+                        message001.innerHTML = question001[1];
+                        message002.innerHTML = options002;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "3") {
+                        message001.innerHTML = question001[2];
+                        message002.innerHTML = options003;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "4") {
+                        message001.innerHTML = question001[3];
+                        message002.innerHTML = options004;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "5") {
+                        message001.innerHTML = question001[4];
+                        message002.innerHTML = options005;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "6") {
+                        message001.innerHTML = question001[5];
+                        message002.innerHTML = options006;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "7") {
+                        message001.innerHTML = question001[6];
+                        message002.innerHTML = options007;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "8") {
+                        message001.innerHTML = question001[7];
+                        message002.innerHTML = options008;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "9") {
+                        message001.innerHTML = question001[8];
+                        message002.innerHTML = options009;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    }
+        
+                    else if (a == "10") {
+                        message001.innerHTML = question001[9];
+                        message002.innerHTML = options010;
+                        message003.innerHTML = "";
+                        number001.innerHTML = a++;
+                        message004.innerHTML = "";
+                    } else {
+                        message002.innerHTML = "";
+                        message003.innerHTML = "";
+                        if(b < 5){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3903569/original_tireddog.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>Oh no.<br>Nobody is perfect. Make sure you do your pet diligence before you think about adopting!<br><button class = "buttons002" onclick = "window.location.href='Info.html'"  style = "font-family: 'Fuzzy Bubbles', cursive;">Read more about pets!</button>
+                            `
+                        }
+                        if(b >= 5 && b < 8){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3827714/original_jack_20russell_20puppy.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>You’re almost ready!<br>Raising a pet is hard work. Keep working on your pet smarts, and you’ll be ready to bring home your new fur kid in no time!<br><button class = "buttons002" onclick = "window.location.href='Info.html'"  style = "font-family: 'Fuzzy Bubbles', cursive;">Read more about pets!</button>
+                            `
+
+                        }
+                        if(b > 8){
+                            message001.innerHTML = `
+                            <img src = "https://d2xcq4qphg1ge9.cloudfront.net/assets/133035/3826852/original_puppapoo.jpg" style = "width:40%;height:auto;">
+                            <br>your score: ${b-1}/10<br>High paw!<br>You’ve got plenty of warm cuddles ahead with your new pet! Way to go!<br><button class = "buttons002" onclick = "window.location.href='Index.html'" style = "font-family: 'Fuzzy Bubbles', cursive;">Back to home</button>
+                            `
+                        }
+                        message004.innerHTML = "<button class=buttons002 onclick=repeat001() onclick=window.scrollTo(0, 0); style = font-family: 'Fuzzy Bubbles', cursive;>Repeat</button>";
+                    }
+                }
+        
+                function repeat001() {
+                    location.reload();
+                }
+        </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+    </script> 
+    </body>
+</html>

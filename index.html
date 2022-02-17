@@ -10,8 +10,12 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="context">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="loader">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_yefgzddc.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style = "z-index: 5;">
         <div class="container-fluid navheader">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,11 +56,11 @@
         </div>
       </nav>
       <!-- https://d17fnq9dkz9hgj.cloudfront.net/uploads/2020/10/Desktop_PF_V4.jpg -->
-      
-      <div class="card-img-overlay text-white" style = "text-align: left;margin-top: 6%;">
-        <h1 class="card-title" style = "margin-left:5%;margin-top:7%;font-size: 52px;font-family: 'Fuzzy Bubbles', cursive;">Find your ideal pet!</h1>
+    <div class="context" style = "display: block;">
+      <div class="card-img-overlay text-white" style = "text-align: left;margin-top: 6%;display: block;">
+        <h1 class="card-title" style = "margin-left:5%;margin-top:7%;font-size: 52px;font-family: 'Fuzzy Bubbles', cursive;">Are you ready to adopt?</h1>
         <p class="card-text" style = "margin-left:5%;font-family: 'Fuzzy Bubbles', cursive;">Answer a few questions to see if you're eligible to adopt</p>
-        <button type="button" class="btn btn-lg btn-outline-info" style = "margin-left:5%;font-family: 'Fuzzy Bubbles', cursive;">Take Test &#8594;</button>
+        <button type="button" class="btn btn-lg btn-outline-info" style = "margin-left:5%;font-family: 'Fuzzy Bubbles', cursive;"onclick="window.location.href='quiz.html'">Take Test &#8594;</button>
       </div>
     </div>
     <div class = "area">
@@ -86,9 +90,10 @@
     <div>
       <h1 style = "font-family: 'Fuzzy Bubbles', cursive;color: #4e54c8;text-align: center;padding-top: 3%;">ADOPT ONE OF THESE MUNCHKINS!</h1>
       <section id = "preview"  style = "display:flex;flex-wrap: wrap;justify-content: space-between;">
+
       </section>
-      <button type="button" class="btn btn-primary btn-lg" style = "margin:auto;display:block;">See all Dogs  &#8594;</button><br>
-      <button type="button" class="btn btn-primary btn-lg" style = "margin:auto;display:block;">See all Cats  &#8594;</button><br>
+      <button type="button" class="btn btn-primary btn-lg" style = "margin:auto;display:block;" onclick="window.location.href='Dogs.html'">See all Dogs  &#8594;</button><br>
+      <button type="button" class="btn btn-primary btn-lg" style = "margin:auto;display:block;" onclick="window.location.href='Cats.html'">See all Cats  &#8594;</button><br>
     </div>
       
     <div style = "background-color: #D3D3D3;">
