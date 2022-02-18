@@ -1165,7 +1165,7 @@ input[type=number]{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: 10s
+    animation-duration: 10s;
     
 }
 
