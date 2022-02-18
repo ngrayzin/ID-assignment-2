@@ -65,7 +65,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form id = "contact_form" onsubmit="myfunction()">
+                <form id = "contact_form" onsubmit="myfunction('submit')">
                   <!-- name -->
 
                   <div id="first-last-name" class="mb-3">
@@ -77,13 +77,11 @@
                   </div>
               
                   <!-- gender -->
-                  <div id="gender" class="mb-3">
-                    <input type="radio" id="male" name="gender" value="1" required>
-                    <label class="main-label" for="male">Male</label>
-              
-                    <input type="radio" id="female" name="gender" value="2" required>
-                    <label class="main-label" for="female">Female</label>
-                  </div>
+                  <input type="radio" id="male" name="gender" value="1" required>
+                  <label class="main-label" for="male">Male</label>
+            
+                  <input type="radio" id="female" name="gender" value="2" required>
+                  <label class="main-label" for="female">Female</label>
                   <!-- address  -->
                   <div id="address" class="mb-3">
                     <label class="main-label" for="address1">Address: </label>
@@ -114,9 +112,7 @@
                     <textarea class="form-control" id="message-text"></textarea>
                   </div>
                   <!-- submit button -->
-                  <div id="button">
-                    <button id = "modalbtn" class="btn btn-primary">Submit</button>
-                  </div>
+                  <button type = "submit" value = "submit" id = "modalbtn" class="btn btn-primary">Submit</button>
                 </form>
               </div>
             </div>
