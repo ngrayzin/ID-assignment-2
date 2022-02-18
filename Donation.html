@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body onload="Donation()">
+  <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid navheader">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,26 +59,26 @@
           </div>
           <div class="donation-tier-container">
               <div class="donation-frequency">
-                  <input type="radio" name="Donation-Freq" id="Freq-One-Time" value="One-Time" onclick="Donation()">
-                  <label for="Freq-One-Time">One-Time</label>
-                  <input type="radio" name="Donation-Freq" id="Freq-Monthly" value="Monthly">
-                  <label for="Freq-Monthly">Monthly</label>
+                  <input type="radio" name="Donation-Freq" id="One-Time" value="One-Time">
+                  <label for="One-Time">One-Time</label>
+                  <input type="radio" name="Donation-Freq" id="Monthly" value="Monthly">
+                  <label for="Monthly">Monthly</label>
               </div>
               <div class="donation-amount-container">
                   <div class="donation-amount">
                       <br>
                       <br>
-                      <input type="radio" name="Donation-amt" id="ten" value="ten">
+                      <input type="radio" name="Donation-amt" id="ten" value="$10">
                       <label for="ten">$10</label>
-                      <input type="radio" name="Donation-amt" id="twenty" value="twenty">
+                      <input type="radio" name="Donation-amt" id="twenty" value="$20">
                       <label for="twenty">$20</label>
-                      <input type="radio" name="Donation-amt" id="fourty" value="fourty">
+                      <input type="radio" name="Donation-amt" id="fourty" value="$40">
                       <label for="fourty">$40</label>
-                      <input type="radio" name="Donation-amt" id="eighty" value="eighty">
+                      <input type="radio" name="Donation-amt" id="eighty" value="$80">
                       <label for="eighty">$80</label>
-                      <input type="radio" name="Donation-amt" id="hundredandsixty" value="hundredandsixty">
+                      <input type="radio" name="Donation-amt" id="hundredandsixty" value="$160">
                       <label for="hundredandsixty">$160</label>
-                      <input type="radio" name="Donation-amt" id="twohundred" value="twohundred">
+                      <input type="radio" name="Donation-amt" id="twohundred" value="$200">
                       <label for="twohundred">$200</label>
                   </div>
               </div>
@@ -87,9 +87,71 @@
               <input type="number" id="customamt" name="customamt" min="1" step="any" placeholder="Enter custom amount to be donated">
               <br>
               <br>
-              <div class="checkout">
-                <button>Checkout</button>
+              <!-- Button trigger modal -->
+            <button type="button" class="donation-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Checkout
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Donation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="Name">Name</label><br>
+                        <input type="text" name="Name" id="Donation-Name" required>
+                        <br>
+                        <label for="Email">E-mail</label><br>
+                        <input type="email" name="Email" id="Donation-Email" required>
+                        <br>
+                        <label for="Amt">Amount Donating</label><br>
+                        <input type="number" name="Amt" id="Donation-Amt" style="height: 30px; width: 200px; font-size:18px ;" required>
+                        <br>
+                        <label for="Frequency">Frequency</label><br>
+                        <input type="text" name="Frequency" id="Donation-Frequency" required>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Payment</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Show a second modal and hide this one with the button below.
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Hide this modal and show the first with the button below.
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
           </div>
       </div>
       <div class="donation-receipt">

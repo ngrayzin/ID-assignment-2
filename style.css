@@ -23,11 +23,13 @@
 
 .cover-dog{
     height: 300px;
-    background: url(images/Dog\ shop\ icon.jpg),url(images/dog\ toy.jpg),url(images/Dog\ bed.jpg);
+    background: url(images/Dog\ shop\ icon.jpg),url(images/Pugtoy.jpg),url(images/Dog\ bed.jpg);
     background-position: left, right, top;
     background-repeat: no-repeat, no-repeat,no-repeat;
-    background-size: 34% 100%, 33% 100%, 34.2% 100%;
+    background-size: 32% 100%, 32% 100%, 32% 100%;
     margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right:10px;
 }
 .cover-image{
     display: flex;
@@ -58,24 +60,23 @@
 }
 
 .petshop-header-image{
-    width: 40%;
-    height: 300px;
+    width: 600px;
+    height: 400px;
 }
 
 .petshop-header{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 300px;
+    background-color: #fae5be;
 }
 
 .petshop-information{
     display: flex;
-    background-color: #fae5be;
     justify-content: center;
     width: 60%;
-    height: 300px;
-    overflow: hidden;
+    height: 100%;
+    text-align: center;
 }
 
 .petshop-information-content{
@@ -83,14 +84,17 @@
     flex-flow: column wrap;
     width: 90%;
     margin: 30px;
+    text-align: center;
 }
 
 .cover-cat{
     height: 300px;
-    background: url(images/ciao\ sticks.jpg),url(images/cat\ toy.jpg),url(images/litter\ box.jpg);
+    background: url(images/Cat\ food\ wet.jpg),url(images/cattoy.jpg),url(images/litter\ box\ reshaped.jpg);
     background-position: left, right, top;
     background-repeat: no-repeat, no-repeat,no-repeat;
-    background-size: 34% 100%, 33% 100%, 34.2% 100%;
+    background-size: 32% 100%, 32% 100%, 32% 100%;
+    margin-left: 10px;
+    margin-right:10px;
 }
 
 * {
@@ -387,6 +391,7 @@ body{
     flex-flow: row wrap;
     justify-content: space-evenly;
     background-color: white;
+    height: fit-content;
 }
 
 .petshop-item-container{
@@ -491,7 +496,7 @@ input[type=number]{
     font-size: 30px;
 }
 
-.checkout button{
+.donation-button{
     width: 100%;
     font: 30px;
     height: 80px;
@@ -700,7 +705,6 @@ input[type=number]{
 }
 
 .PurchaseButton{
-
     margin: 40px auto 80px auto;
     font-size: 30px;
     text-align: center;
@@ -720,37 +724,76 @@ input[type=number]{
 }
 
 .STW{
+    display: flex;
     width: 100%;
-    height: 520px;
-    background-color: black;
+    height: fit-content;
+    background-color: #fae5be;
+    flex-flow:row wrap;
+}
+
+.STWhrefcontainer{
+    width: 100%;
+    background-color: #fae5be;
+}
+
+.STWhrefcontainer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.STW-content{
+    display: flex;
+    flex-flow: column wrap;
+    left: 5%;
+    margin-top: 4%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.STW-content h3{
+    font-size: 40px;
+    margin: 10px;
 }
 
 .app{
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin: 0;
     position: relative;
+    margin-left: 100px;
 }
 
 .STW-Marker{
     position: absolute;
     width: 60px;
-    left:172px;
-    top: 350px;
+    top: 450px;
+    left: 220px;
     transform: rotate(180deg);
     z-index: 1;
 }
 
+.STW-container{
+    display: flex;
+    margin: 25px;
+    width: 45%;
+}
+
 .STW-Wheel{
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
+
 }
 
 .STW-Button{
     display: block;
-    width: 250px;
-    margin: 40px auto;
+    width: 400px;
+    margin: 40px;
     cursor: pointer;
+    margin-left: 50px;
+
 }
 
 .STW-Button:hover{
@@ -761,15 +804,12 @@ input[type=number]{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 500px;
     height: 50px;
     border-radius: 20px;
     text-align: center;
     font-size: 2rem;
-    margin: 20px auto;
-    position: absolute;
-    bottom: 150px;
-    left: 450px;
+    margin: 20px;
     background-color: white;
     color: black;
 }
@@ -784,7 +824,11 @@ input[type=number]{
     box-shadow: inset 1px 2px 5px #777;
     transform: translateY(1px);
     background: #e5e5e5;
+    cursor:auto;
+    
 }
+
+
 
 .donation-frequency input[type="radio"]:focus + label{
     border: 2px solid black;
@@ -800,6 +844,7 @@ input[type=number]{
     width: 150px;
     height: 60px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .donation-amount input[type="radio"]{
@@ -812,6 +857,7 @@ input[type=number]{
     box-shadow: inset 1px 2px 5px #777;
     transform: translateY(1px);
     background: #e5e5e5;
+    cursor: auto;
 }
 
 .donation-amount input[type="radio"]:focus + label{
@@ -828,6 +874,7 @@ input[type=number]{
     width: 150px;
     height: 60px;
     margin: 10px;
+    cursor: pointer;
 }
 .quiz{
     position: absolute;

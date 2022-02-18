@@ -1012,7 +1012,7 @@ function Spinthewheel(){
   startButton.addEventListener('click',() => {
     display.innerHTML = "-";
     startButton.style.pointerEvents = 'none';
-    deg = Math.floor(3000 + Math.random() * 3000);
+    deg = Math.floor(5000 + Math.random() * 5000);
     wheel.style.transition = 'all 10s ease-out';
     wheel.style.transform =  `rotate(${deg}deg)`;
   });
@@ -1026,11 +1026,60 @@ function Spinthewheel(){
   })
 };
 
-function Donation(){
-  var OneTime = document.querySelector('input[id="Freq-One-Time"]')
-  OneTime.addEventListener('click',()=>{
-    console.log('hi')
+  const Onetime = document.getElementById("One-Time")
+  const Monthly = document.getElementById("Monthly")
+  const ten = document.getElementById("ten")
+  const twenty = document.getElementById("twenty")
+  const fourty = document.getElementById("fourty")
+  const eighty = document.getElementById("eighty")
+  const hundredsixty = document.getElementById("hundredandsixty")
+  const twohundred = document.getElementById("twohundred")
+  const button = document.querySelector(".donation-button")
+  const customamt = document.querySelector("#customamt")
+  var custom = document.querySelector('input[type="number"]')
+  const API = "620f3e4534fd621565858781";
+  var freq;
+  var amt;
+
+  Onetime.addEventListener('click', ()=>{
+    freq = Onetime.value
   })
-  var donationfreq = document.querySelector('input[name="Donation-Freq"]:checked')
-  console.log(donationfreq)
-  }
+  Monthly.addEventListener('click', ()=>{
+    freq = Monthly.value
+  })
+  ten.addEventListener('click', ()=>{
+    amt = ten.value
+    customamt.style.display = "none"
+  })
+  twenty.addEventListener('click', ()=>{
+    amt = twenty.value
+    customamt.style.display = "none"
+  })
+  fourty.addEventListener('click', ()=>{
+    amt = fourty.value
+    customamt.style.display = "none"
+  })
+  eighty.addEventListener('click', ()=>{
+    amt = eighty.value
+    customamt.style.display = "none"
+  })
+  hundredsixty.addEventListener('click', ()=>{
+    amt = hundredsixty.value
+    customamt.style.display = "none"
+  })
+  twohundred.addEventListener('click', ()=>{
+    amt = twohundred.value
+    customamt.style.display = "none"
+  })
+  button.addEventListener('click', ()=>{
+    if(amt==null){
+      amt='$' + custom.value
+    }
+    else if(amt == '$10' || amt == '$20' || amt == '$40' || amt == '$80' || amt == '$160' || amt == '$200'){
+      button.innerHTML = amt
+    }
+    else{
+      amt='$' + custom.value
+    }
+    button.innerHTML = amt
+  })

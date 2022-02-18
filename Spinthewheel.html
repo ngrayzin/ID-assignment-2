@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pet Adoption Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="Spinthewheel()">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid navheader">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"  style = "max-width: 1100px;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a href="index.html">
+              <img src="images/Heart paw.png" alt="Logo" width="65" height="60" style="border: black;" class="d-inline-block align-text-top">
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="pills-tab">
+                <li class="nav-item">
+                  <a class="nav-link" style="margin: 20px; font-size: 30px;" href="index.html">Home</a>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="margin-top: 20px; margin-left: 20px; margin-right: 20px; font-size: 30px;" href="#" data-bs-toggle="dropdown">Pets </a>
+                 <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="Dogs.html"><img src="images/Dog cartoon.png" width="40px" height="40px" alt="">Dogs</a>
+                   </li>
+                  <li>
+                    <a class="dropdown-item" href="Cats.html"><img src="images/Cat cartoon.png" width="40px" height="40px" alt="">Cats</a>
+                   </li>
+                 </ul>
+             </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Info.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px;" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Donation.html">Services</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" style="margin: 20px;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success shopbut" style="margin: 20px;" type="submit">Search</button>
+            </form>
+            <a href="checkout.html">
+              <img src="images/Cart.png" style="width:60px; height:60px; margin: 20px;" alt="" onclick="addToCartClicked()">
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div class="STW">
+          <div class="STW-container">
+            <div class="app">
+                <img class="STW-Marker" src="images/STW Marker.png" alt="">
+                <img class="STW-Wheel" src="images/STW Wheel.png" alt="">
+                <img class="STW-Button" src="images/STW button.png" alt="">
+              </div>
+          </div>
+          <div class="STW-container">
+            <div class="STW-content">
+                <div class="STW-Display">-</div>
+                <h3>Koala - Better luck next time</h3>
+                <h3>Unicorn - 20% off your total</h3>
+                <h3>Dragon - Better luck next time</h3>
+                <h3>Snowman - 15% off your total</h3>
+                <h3>Frog - Better luck next time</h3>
+                <h3>Snail - 5% off your total</h3>
+                <h3>Dolphin - Better luck next time</h3>
+                <h3>Ladybug - 10% off your total</h3>
+              </div>
+          </div>
+      </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascript.js"></script> 
+  </body>
+</html
