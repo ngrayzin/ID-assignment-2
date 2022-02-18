@@ -443,10 +443,10 @@ fetch('animals.json')
                 
                     <!-- gender -->
                     <div id="gender" class="mb-3">
-                      <input type="radio" id="male" name="gender" value="1" required>
-                      <label class="main-label" for="male">Male</label>
+                      <input type="radio" id="male" name="gender" value="1" style="height:15px; width:25px; vertical-align: middle; required>
+                      <label class="main-label" for="male">Male</label><br>
                 
-                      <input type="radio" id="female" name="gender" value="2" required>
+                      <input type="radio" id="female" name="gender" value="2" style="height:15px; width:25px; vertical-align: middle; required>
                       <label class="main-label" for="female">Female</label>
                     </div>
                     <!-- address  -->
@@ -456,10 +456,10 @@ fetch('animals.json')
 
 
                       <label class="main-label" for="town">Town: </label>
-                      <input type="text" id="town" size="15" placeholder="Your town">
+                      <input type="text" id="town" size="15" placeholder="Your town" style = "width:40%;">
 
                       <label class="main-label" for="postcode">Postcode: </label>
-                      <input type="text" id="postcode" size="10" placeholder="Postcode"><br><br>
+                      <input type="text" id="postcode" size="10" placeholder="Postcode" style = "width:30%;"><br><br>
 
                     </div>
 
