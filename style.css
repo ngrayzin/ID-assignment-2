@@ -776,7 +776,6 @@ input[type=number]{
 }
 
 .STW-container{
-    display: flex;
     margin: 25px;
     width: 45%;
 }
@@ -793,7 +792,6 @@ input[type=number]{
     margin: 40px;
     cursor: pointer;
     margin-left: 50px;
-
 }
 
 .STW-Button:hover{
@@ -876,6 +874,140 @@ input[type=number]{
     margin: 10px;
     cursor: pointer;
 }
+
+.Donation-Button-Modal{
+    width: 50%;
+    font: 30px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+.modal-body input{
+    width: 300px;
+    height: 40px;
+}
+
+.CheckoutContainer{
+    display: flex;
+    width: 70%;
+    flex-flow: row;
+    background-color: lightgray;
+    margin-left: 15%;
+}
+
+.CheckoutContent{
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+}
+
+.CheckoutTitle{
+    text-align: center;
+}
+
+.Formtitle{
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.CheckoutInput {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 5%;
+}
+
+.CheckoutEntity{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 7px;
+}
+
+.ImageContainer{
+    display: flex;
+    margin-bottom: 25px;
+    padding: 6px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.CheckoutButton{
+    display: block;
+    margin: 20px auto 20px auto;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;background-color: lightblue;
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.errormessage{
+    color: red;
+}
+
+.DonationGetContent{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    margin-left: 0;
+    margin-right:0 ;
+}
+.DonationGetPlacement{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.DonationGetPlacement th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+    width: 31%;
+}
+.DonationGetPlacement td, .DonationGetPlacement th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+.dgc2{
+    display: flex;
+    margin-left: 8%;
+}
+.dgc3{
+    display: flex;
+    margin-left: 10%;
+}
+.dgc4{
+    display: flex;
+    margin-left: 20%;
+}
+
+.DonationGetContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border:3px solid;
+}
+.DonationGetContainer h4{
+    margin: 20px;
+}
+
 .quiz{
     position: absolute;
     border-radius: 25px 25px 25px 25px;width:80%;height: auto;background-color: rgba(214, 214, 214, 0.322);display: block;margin-top:10%;margin-left:10%;
@@ -1214,4 +1346,135 @@ input[type=number]{
     margin-right:0;
     font-weight:600
   }
+}
+
+@media (max-width:650px){
+    .app{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        position: relative;
+
+    }
+    
+    .STW-Marker{
+        position: absolute;
+        width: 15%;
+        top: 70%;
+        left: 43%;
+        transform: rotate(180deg);
+        z-index: 1;
+    }
+    
+    .STW-container{
+        margin: 25px;
+        width: 100%;
+    }
+    
+    .STW-Wheel{
+        width: 100%;
+        height: 35%;
+    
+    }
+    
+    .STW-Button{
+        display: block;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .STW-content{
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .STW-content h3{
+        font-size: 2rem;
+        margin: 10px;
+    }
+    .STW-Display{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 20%;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1rem;
+        margin: 20px;
+        background-color: white;
+        color: black;
+    }
+    .petshop-header-image{
+        max-width: 60%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .petshop-header{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        background-color: #fae5be;
+        justify-content: center;
+    }
+    
+    .petshop-information{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .petshop-information-content{
+        text-align: center;
+        flex-flow: column wrap;
+        width: 90%;
+        margin: 30px;
+    }
+    .cover-dog{
+        height: 100%;
+        background: url(images/Dog\ shop\ icon.jpg),url(images/Pugtoy.jpg),url(images/Dog\ bed.jpg);
+        background-position: left, right, top;
+        background-repeat: no-repeat, no-repeat,no-repeat;
+        background-size: 32% 100%, 32% 100%, 32% 100%;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        margin-right:10px;
+    }
+    .cover-cat{
+        height: 100%;
+        background: url(images/Cat\ food\ wet.jpg),url(images/cattoy.jpg),url(images/litter\ box\ reshaped.jpg);
+        background-position: left, right, top;
+        background-repeat: no-repeat, no-repeat,no-repeat;
+        background-size: 32% 100%, 32% 100%, 32% 100%;
+        margin-left: 10px;
+        margin-right:10px;
+    }
+    .cover-image button{
+        width: 20%; 
+        height: fit-content;
+        border-radius: 10px;
+        background-color: pink;
+        color: white;
+        border-color: pink;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .STWhrefcontainer{
+        width: 100%;
+        background-color: #fae5be;
+    }
+    
+    .STWhrefcontainer img{
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+    }
 }

@@ -40,7 +40,7 @@
                 <a class="nav-link" style="margin: 20px; font-size: 30px; border-radius: 20px; background-color: lightblue;" href="shop.html">Shop</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="margin: 20px; font-size: 30px;">Services</a>
+                <a class="nav-link" style="margin: 20px; font-size: 30px;" href="Payment.html">Services</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -88,77 +88,56 @@
               <br>
               <br>
               <!-- Button trigger modal -->
-            <button type="button" class="donation-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Checkout
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Donation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="donation-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Proceed
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Donation Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <label for="Name">Name</label><br>
+                                <input type="text" name="Name" id="Donation-Name" required>
+                                <br>
+                                <label for="Email">E-mail</label><br>
+                                <input type="email" name="Email" id="Donation-Email" required>
+                                <br>
+                                <label for="Amt">Amount Donating</label><br>
+                                <input type="text" name="Amt" id="Donation-Amt" required>
+                                <br>
+                                <label for="Frequency">Frequency</label><br>
+                                <input type="text" name="Frequency" id="Donation-Frequency" required>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="Donation-Button-Modal">Proceed to payment</button>
+                        </div>
+                        <div class="errormessage"></div>
                     </div>
-                    <div class="modal-body">
-                        <label for="Name">Name</label><br>
-                        <input type="text" name="Name" id="Donation-Name" required>
-                        <br>
-                        <label for="Email">E-mail</label><br>
-                        <input type="email" name="Email" id="Donation-Email" required>
-                        <br>
-                        <label for="Amt">Amount Donating</label><br>
-                        <input type="number" name="Amt" id="Donation-Amt" style="height: 30px; width: 200px; font-size:18px ;" required>
-                        <br>
-                        <label for="Frequency">Frequency</label><br>
-                        <input type="text" name="Frequency" id="Donation-Frequency" required>
-                    </div>
-                    <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Payment</button>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Show a second modal and hide this one with the button below.
-                    </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      Hide this modal and show the first with the button below.
-                    </div>
-                    <div class="modal-footer">
-                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
           </div>
       </div>
-      <div class="donation-receipt">
-          <h1>Donation Acknowledgement Form</h1>
-          <p>If you made a monetary donation, please request for a receipt within 14 days of the transaction. As we are experiencing an influx of enquiries, do grant our volunteer team some time to acknowledge your donation and/or issue a receipt.</p>
-          <button>Submit Here</button>
-      </div>
+      <div class="TitleNoDonation">
+        <h1>Donations made</h1>
+    </div>
+      <br>
+    <div class="DonationGetPlacement">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Donation Frequency</th>
+                <th>Donated Amount</th>
+            </tr>
+        </table>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="javascript.js"></script> 
   </body>

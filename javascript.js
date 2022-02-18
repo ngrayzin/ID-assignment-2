@@ -1069,7 +1069,13 @@ function Spinthewheel(){
   const button = document.querySelector(".donation-button")
   const customamt = document.querySelector("#customamt")
   var custom = document.querySelector('input[type="number"]')
-  const API = "620f3e4534fd621565858781";
+  const name = document.querySelector('#Donation-Name')
+  const email = document.querySelector('#Donation-Email')
+  const donationamt = document.querySelector('#Donation-Amt')
+  const donationfreq = document.querySelector('#Donation-Frequency')
+  const donationbutton = document.querySelector('.Donation-Button-Modal')
+  const donationdetailname = document.querySelector('#Donation-Name')
+  const donationdetailemail = document.querySelector('#Donation-Email')
   var freq;
   var amt;
 
@@ -1105,13 +1111,139 @@ function Spinthewheel(){
   })
   button.addEventListener('click', ()=>{
     if(amt==null){
-      amt='$' + custom.value
+      if(custom.value != ''){
+        amt='$' + custom.value
+        donationamt.value = amt
+        if(freq == undefined){
+          donationfreq.value = "Click a frequency button"
+        }
+        else{
+          donationfreq.value = freq
+        }
+        donationamt.disabled=true
+        donationfreq.disabled=true
+      }
+      else if(custom.value==''){
+        donationamt.value = "Click or enter an amount"
+        if(freq == undefined){
+          donationfreq.value = "Click a frequency button"
+        }
+        else{
+          donationfreq.value = freq
+        }
+        donationamt.disabled=true
+        donationfreq.disabled=true
+      }
     }
     else if(amt == '$10' || amt == '$20' || amt == '$40' || amt == '$80' || amt == '$160' || amt == '$200'){
-      button.innerHTML = amt
+      donationamt.value = amt
+      if(freq == undefined){
+        donationfreq.value = "Click a frequency button"
+      }
+      else{
+        donationfreq.value = freq
+      }
+      donationamt.disabled=true
+      donationfreq.disabled=true
     }
     else{
       amt='$' + custom.value
+      donationamt.value = amt
+      if(freq == undefined){
+        donationfreq.value = "Click a frequency button"
+      }
+      else{
+        donationfreq.value = freq
+      }
+      donationamt.disabled=true
+      donationfreq.disabled=true
     }
-    button.innerHTML = amt
   })
+  donationbutton.addEventListener('click',()=>{
+    document.querySelector('.errormessage').innerHTML = ""
+      if(donationdetailemail.value != '' && donationdetailemail.value != null && donationdetailname.value != '' && donationdetailname.value != null){
+        var has_at_char = donationdetailemail.value.indexOf('@') === -1; //checks if there is an @, returns false if there is, returns true if there isnt
+        if(has_at_char == false){
+          DelayURL("Payment.html")
+        }
+        else{
+          document.querySelector('.errormessage').innerHTML = "Please include and @ in your email"
+        }
+      }
+      if(donationdetailemail.value == '' || donationdetailemail.value == null){
+        document.querySelector('.errormessage').innerHTML = "Please fill up the email field"
+      }
+      if(donationdetailname.value == '' || donationdetailname.value == null){
+        document.querySelector('.errormessage').innerHTML = "Please fill up the name field"
+      }
+      if((donationdetailemail.value == '' || donationdetailemail.value == null) && donationdetailname.value == '' || donationdetailname.value == null){
+        document.querySelector('.errormessage').innerHTML = "Please fill up the name and email field"
+      }
+  })
+
+$(document).ready(function (){
+  const hongweiAPIKEY = "620f3e4534fd621565858781";
+  getDonations();
+  $('.Donation-Button-Modal').on('click', function(e){
+    e.preventDefault();
+    let donationName = $('#Donation-Name').val();
+    let donationEmail =  $('#Donation-Email').val();
+    let donationAmount = $('#Donation-Amt').val();
+    let donationFrequency = $('#Donation-Frequency').val();
+    console.log(donationName,donationEmail,donationAmount,donationFrequency)
+    let jsondata = {
+      "name": donationName,
+      "email": donationEmail,
+      "amount": donationAmount,
+      "frequency": donationFrequency
+    };
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://assignment2-6831.restdb.io/rest/donation",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": hongweiAPIKEY,
+      "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(jsondata)
+  }
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    getDonations();
+    });
+  });
+  function getDonations(limit = 100, all = true){
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://assignment2-6831.restdb.io/rest/donation",
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": hongweiAPIKEY,
+        "cache-control": "no-cache"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      for(var i = 0; i < response.length && i < limit; i++){
+        var content = `
+        <tr>
+        <td>${response[i].name}</td>
+        <td>${response[i].email}</td>
+        <td>${response[i].frequency}</td>
+        <td>${response[i].amount}</td>
+        </tr>`
+        $('.DonationGetPlacement table').append(content)
+      }
+    });
+  }
+})
+
+function DelayURL(url){
+  setTimeout( function() { window.location.href = url }, 2500 );
+}
