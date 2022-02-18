@@ -76,7 +76,7 @@ fetch('animals.json')
           }
       }
       if(document.getElementById("dogcards") != null){
-        for(i=0;i < doglist.length;i++)
+        for(i=0;i < doglist.length;i++) /* */
         {
           const response = await fetch('https://dog.ceo/api/breeds/image/random');
           const data_2 = await response.json();
@@ -95,10 +95,10 @@ fetch('animals.json')
                         </div>
                         <div class="col-md-8">
                           <div class="card-body" style = "text-align:left;">
-                            <h5 class="card-title">${adata.results[0].name.first}</h5>
-                            <p class="card-text id = "b">gender: ${adata.results[0].gender}</p>
-                            <p class="card-text id = "b">breed: ${breed}</p>
-                            <p class="card-text id = "b">description: ${adata.results[0].name.first} is an amazing dog</p>
+                            <h5 class="card-title" id = "dn">${adata.results[0].name.first}</h5>
+                            <p class="card-text id = "dg">gender: ${adata.results[0].gender}</p>
+                            <p class="card-text id = "db">breed: ${breed}</p>
+                            <p class="card-text id = "dd">description: ${adata.results[0].name.first} is an amazing dog</p>
                             <!-- Button trigger modal -->
                             <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button> 
                           </div>
@@ -107,7 +107,7 @@ fetch('animals.json')
                     </div>
                 </aside>`;
           }
-      }
+      }/*onclick = "myfunction3()" dog button submit*/
       else if(document.getElementById("catcards") != null){
         for(i=0;i < catlist.length;i++)
         {
@@ -115,7 +115,6 @@ fetch('animals.json')
           const data_3 = await response.json();
           const aresponse = await fetch('https://randomuser.me/api/');
           const adata = await aresponse.json();
-          console.log(data_3[0].url)
           var Url = data_3[0].url
           document.getElementById("catcards").innerHTML += `
           <aside style="max-width: 540px;flex: 2 1 100%;float:left;margin-right:5%">
@@ -126,10 +125,10 @@ fetch('animals.json')
                 </div>
                 <div class="col-md-8">
                   <div class="card-body" style = "text-align:left;">
-                    <h5 class="card-title">${adata.results[0].name.first}</h5>
-                    <p class="card-text id = "b">gender: ${adata.results[0].gender}</p>
-                    <p class="card-text id = "b">breed: ${catlist[i].breeds.primary}</p>
-                    <p class="card-text id = "b">description: ${adata.results[0].name.first} is an amazing cat</p>
+                    <h5 class="card-title" id = "cn">${adata.results[0].name.first}</h5>
+                    <p class="card-text id = "cg">gender: ${adata.results[0].gender}</p>
+                    <p class="card-text id = "cb">breed: ${catlist[i].breeds.primary}</p>
+                    <p class="card-text id = "cd">description: ${adata.results[0].name.first} is an amazing cat</p>
                     <!-- Button trigger modal -->
                     <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button>
                   </div>
@@ -138,7 +137,7 @@ fetch('animals.json')
             </div>
           <aside>`
         }
-      }
+      }/*onclick = "myfunction3()" inside button cat*/
       else if(document.getElementById("preview") != null){
         console.log(catlist)
         const aresponse = await fetch('https://randomuser.me/api/');
@@ -151,10 +150,10 @@ fetch('animals.json')
               </div>
               <div class="col-md-8">
                 <div class="card-body" style = "text-align:left;">
-                  <h5 class="card-title">${catlist[4].name}</h5>
-                  <p class="card-text id = "b">gender: ${catlist[4].gender}</p>
-                  <p class="card-text id = "b">breed: ${catlist[4].breeds.primary}</p>
-                  <p class="card-text id = "b">description: ${catlist[4].name} is an amazing cat</p>
+                  <h5 class="card-title" id = "pcn">${catlist[4].name}</h5>
+                  <p class="card-text id = "pcg">gender: ${catlist[4].gender}</p>
+                  <p class="card-text id = "pcb">breed: ${catlist[4].breeds.primary}</p>
+                  <p class="card-text id = "pcd">description: ${catlist[4].name} is an amazing cat</p>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" onclick = "myfunction3()" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -215,7 +214,7 @@ fetch('animals.json')
                           </div>
                           <!-- submit button -->
                           <div id="button">
-                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-primary">Submit</button>
                           </div>
                           </form>
                         </div>
@@ -233,10 +232,10 @@ fetch('animals.json')
               </div>
               <div class="col-md-8">
                 <div class="card-body" style = "text-align:left;">
-                  <h5 class="card-title">${doglist[0].name}</h5>
-                  <p class="card-text id = "b">gender: ${doglist[0].gender}</p>
-                  <p class="card-text id = "b">breed: ${doglist[0].breeds.primary}</p>
-                  <p class="card-text id = "b">description: ${doglist[0].name} is an amazing dog</p>
+                  <h5 class="card-title" id = "pdn">${doglist[0].name}</h5>
+                  <p class="card-text id = "pdg">gender: ${doglist[0].gender}</p>
+                  <p class="card-text id = "pdb">breed: ${doglist[0].breeds.primary}</p>
+                  <p class="card-text id = "pdd">description: ${doglist[0].name} is an amazing dog</p>
                   <!-- Button trigger modal -->
                   <button type="button" onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -297,7 +296,7 @@ fetch('animals.json')
                           </div>
                           <!-- submit button -->
                           <div id="button">
-                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-primary">Submit</button>
                           </div>
                           </form>
                         </div>
@@ -314,7 +313,7 @@ fetch('animals.json')
 
   function myfunction2(){
     document.getElementById("modalbody").innerHTML = `
-    <form id = "contact_form" onsubmit="myfunction()">
+    <form id = "contact_form">
       <!-- name -->
 
       <div id="first-last-name" class="mb-3">
@@ -330,7 +329,7 @@ fetch('animals.json')
         <input type="radio" id="male" name="gender" value="1" required>
         <label class="main-label" for="male">Male</label>
   
-        <input type="radio" id="female" name="gender" value="2" required>
+        <input type="radio" id="female" name="gender" value="0" required>
         <label class="main-label" for="female">Female</label>
       </div>
       <!-- address  -->
@@ -363,15 +362,60 @@ fetch('animals.json')
         <textarea class="form-control" id="message-text"></textarea>
       </div>
       <!-- submit button -->
-      <div id="button">
-        <button id = "modalbtn"class="btn btn-primary">Submit</button>
-      </div>
+      <button type = "submit" value = "submit" onclick="myfunction()" id = "modalbtn" class="btn btn-primary">Submit</button>
     </form>
     
     `
   }
+
   var check = false
-  function myfunction(){
+  const rayzinAPIKEY = "620e6f4b34fd621565858744";
+  const rayzinURL = "https://assignment-9231.restdb.io/rest/contact"
+  function myfunction() {
+    let contactName = $("#name").val();
+    let contactlastName = $("#lastName").val();
+    let contactGender = $("#male").val()
+    let contactAdress = $("#address1").val();
+    let contactTown = $("#town").val();
+    let contactPostCode = $("#postcode").val();
+    let contactPhone = $("#phone").val();
+    let contactEmail = $("#email").val();
+    let contactMessage = $("#message-text").val();
+    console.log(contactName,contactlastName,contactGender,contactAdress,contactTown,contactPostCode,contactPhone,contactEmail,contactMessage)
+    var name = contactName + " " + contactlastName;
+    console.log(name)
+    var realgender
+    if(contactGender = 1){realgender = "Male"}
+    else{realgender = "Female"}
+    console.log(realgender)
+    let jsondata = {
+      "name": name,
+      "gender": realgender,
+      "Address": contactAdress,
+      "Town": contactTown,
+      "Postal code": contactPostCode,
+      "phone number":contactPhone,
+      "email": contactEmail,
+      "message": contactMessage
+    };
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": rayzinURL,
+      "method": "POST",
+      "headers": {
+        "content-type": "application/json",
+        "x-apikey": rayzinAPIKEY,
+        "cache-control": "no-cache"
+      },
+      "processData": false,
+      "data": JSON.stringify(jsondata)
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+
     document.getElementById("exampleModal").innerHTML = `
       <div class="modal-dialog">
         <div class="modal-content">
@@ -453,7 +497,7 @@ fetch('animals.json')
                     </div>
                     <!-- submit button -->
                     <div id="button">
-                      <button type="submit" id = "modalbtn"class="btn btn-primary">Submit</button>
+                      <button id = "modalbtn"class="btn btn-primary">Submit</button>
                     </div>
                   </form>
                 </div>
@@ -486,19 +530,7 @@ fetch('animals.json')
       const loader = document.querySelector(".loader");
       loader.className += " hidden"; // class "loader hidden"
   });
-$("#contact_form").on("submit", function (e) {
-  e.preventDefault();
-  alert("its working");
-  let contactName = $("#name").val();
-  let contactGender = $("#gender").val();
-  let contactAdress = $("#address1").val();
-  let contactTown = $("#town").val();
-  let contactPostCode = $("#postcode").val();
-  let contactPhone = $("#phone").val();
-  let contactEmail = $("#email").val();
-  let contactMessage = $("#message-text").val();
-  console.log(contactName,contactGender,contactAdress,contactTown,contactPostCode,contactPhone,contactEmail,contactMessage)
-})
+
 
   /*const shopSearchInput = document.querySelector(".myinputdog");
   shopSearchInput.addEventListener("keyup", event => {
