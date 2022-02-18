@@ -59,8 +59,10 @@ thedogceoapi
 thecatapi
 internet
 
-Content
-
+Contributions:
+Rayzin: home page, pet page(dog and cat), about page
+Hong Wei: Shop, Donation
+Each of the pages have different and unique interactions and features that made the work equal.
 
 Acknowledgements
 I received inspiration for this project from many pet adoption websites 
