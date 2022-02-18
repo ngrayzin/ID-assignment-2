@@ -232,10 +232,10 @@ fetch('animals.json')
               </div>
               <div class="col-md-8">
                 <div class="card-body" style = "text-align:left;">
-                  <h5 class="card-title" id = "pdn">${doglist[0].name}</h5>
-                  <p class="card-text id = "pdg">gender: ${doglist[0].gender}</p>
-                  <p class="card-text id = "pdb">breed: ${doglist[0].breeds.primary}</p>
-                  <p class="card-text id = "pdd">description: ${doglist[0].name} is an amazing dog</p>
+                  <h5 class="card-title" id = "n">${doglist[0].name}</h5>
+                  <p class="card-text id = "g">gender: ${doglist[0].gender}</p>
+                  <p class="card-text id = "b">breed: ${doglist[0].breeds.primary}</p>
+                  <p class="card-text id = "d">description: ${doglist[0].name} is an amazing dog</p>
                   <!-- Button trigger modal -->
                   <button type="button" onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
