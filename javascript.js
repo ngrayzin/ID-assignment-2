@@ -96,9 +96,9 @@ fetch('animals.json')
                         <div class="col-md-8">
                           <div class="card-body" style = "text-align:left;">
                             <h5 class="card-title" id = "dn">${adata.results[0].name.first}</h5>
-                            <p class="card-text id = "dg">gender: ${adata.results[0].gender}</p>
-                            <p class="card-text id = "db">breed: ${breed}</p>
-                            <p class="card-text id = "dd">description: ${adata.results[0].name.first} is an amazing dog</p>
+                            <p class="card-text id = "g">gender: ${adata.results[0].gender}</p>
+                            <p class="card-text id = "b">breed: ${breed}</p>
+                            <p class="card-text id = "d">description: ${adata.results[0].name.first} is an amazing dog</p>
                             <!-- Button trigger modal -->
                             <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button> 
                           </div>
@@ -125,10 +125,10 @@ fetch('animals.json')
                 </div>
                 <div class="col-md-8">
                   <div class="card-body" style = "text-align:left;">
-                    <h5 class="card-title" id = "cn">${adata.results[0].name.first}</h5>
-                    <p class="card-text id = "cg">gender: ${adata.results[0].gender}</p>
-                    <p class="card-text id = "cb">breed: ${catlist[i].breeds.primary}</p>
-                    <p class="card-text id = "cd">description: ${adata.results[0].name.first} is an amazing cat</p>
+                    <h5 class="card-title" id = "n">${adata.results[0].name.first}</h5>
+                    <p class="card-text id = "g">gender: ${adata.results[0].gender}</p>
+                    <p class="card-text id = "b">breed: ${catlist[i].breeds.primary}</p>
+                    <p class="card-text id = "d">description: ${adata.results[0].name.first} is an amazing cat</p>
                     <!-- Button trigger modal -->
                     <button onclick = "myfunction3()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Adopt!</button>
                   </div>
@@ -150,10 +150,10 @@ fetch('animals.json')
               </div>
               <div class="col-md-8">
                 <div class="card-body" style = "text-align:left;">
-                  <h5 class="card-title" id = "pcn">${catlist[4].name}</h5>
-                  <p class="card-text id = "pcg">gender: ${catlist[4].gender}</p>
-                  <p class="card-text id = "pcb">breed: ${catlist[4].breeds.primary}</p>
-                  <p class="card-text id = "pcd">description: ${catlist[4].name} is an amazing cat</p>
+                  <h5 class="card-title" id = "n">${catlist[4].name}</h5>
+                  <p class="card-text id = "g">gender: ${catlist[4].gender}</p>
+                  <p class="card-text id = "b">breed: ${catlist[4].breeds.primary}</p>
+                  <p class="card-text id = "d">description: ${catlist[4].name} is an amazing cat</p>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" onclick = "myfunction3()" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Adopt!</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -329,7 +329,7 @@ fetch('animals.json')
         <input type="radio" id="male" name="gender" value="1" required>
         <label class="main-label" for="male">Male</label>
   
-        <input type="radio" id="female" name="gender" value="0" required>
+        <input type="radio" id="female" name="gender" value="2" required>
         <label class="main-label" for="female">Female</label>
       </div>
       <!-- address  -->
@@ -374,7 +374,7 @@ fetch('animals.json')
   function myfunction() {
     let contactName = $("#name").val();
     let contactlastName = $("#lastName").val();
-    let contactGender = $("#male").val()
+    let contactGender = $('input[name="gender"]:checked').val()
     let contactAdress = $("#address1").val();
     let contactTown = $("#town").val();
     let contactPostCode = $("#postcode").val();
@@ -385,7 +385,7 @@ fetch('animals.json')
     var name = contactName + " " + contactlastName;
     console.log(name)
     var realgender
-    if(contactGender = 1){realgender = "Male"}
+    if(contactGender == 1){realgender = "Male"}
     else{realgender = "Female"}
     console.log(realgender)
     let jsondata = {
