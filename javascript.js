@@ -321,7 +321,7 @@ fetch('animals.json')
         <input type="text" id="address1" size="30" placeholder="Enter your address here"><br><br>
 
 
-        <label class="main-label" for="town">Town: </label>
+        <label class="main-label" for="town">Town: </label><br>
         <input type="text" id="town" size="15" placeholder="Your town">
 
         <label class="main-label" for="postcode">Postcode: </label>
