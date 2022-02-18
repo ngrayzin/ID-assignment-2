@@ -8,6 +8,14 @@ This website wants to reach out as far as possible for everyone to know about th
 Design Process
 The design process of this project is to make it colourful and bright to represent hope. For this website, we will have 6 pages. The first page is the home page,  second page is the animal preview, third would be the about page, fourth shop and fifth the donation page.
 
+Shop(Hong Wei)- For the shop I wanted to have something cool. So, I actually wanted the items to pop out when a button is clicked. The theme was based of a picture and I thought the background was nice.
+
+Spinning Wheel(Hong Wei)- I wanted to make something that was fun and entertaining which served a purpose. So, I thought I could combine a game and discounts. Then the Idea for a spin the wheel game was born. 
+
+Donation(Hong Wei)- For this page I know that lots of people donate money to organisations. So I wanted to make a nice page that is user friendly yet shows features taught to us in class. So, I implemented RestAPI alongside the javascript. The page shows the people who have donated and also makes it easy for people to donate themselves. Everything is neat.
+
+Shopping Cart(Hong Wei)- Obviously, a shop must have a working shopping cart. It has all it needs. A row to show the items name, price, quantity, and a remove button. It also shows the total, which is able to update based on quantity changes and discounts given on the Spin the Wheel game.
+
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 
 As a user type, I want to adopt a pet, so that I can be happy and find a new fur friend, as well as finding the right things to buy for my newly adopted pet. I also need 
@@ -58,6 +66,7 @@ restdb
 thedogceoapi
 thecatapi
 internet
+https://youtu.be/KdFp12QX-Io
 
 Content
 
@@ -66,3 +75,6 @@ Acknowledgements
 I received inspiration for this project from many pet adoption websites 
 https://minsom.com/
 petfinder.com
+
+Reflection (Hong Wei):
+Overall, this assignment taught me many things. Like the capabilites of javascript and the usefulness of API. I think I have done enough where I have an acceptable knowledge on JS, HTML, CSS. I have also learnt how to use JS to make fun games and extend the use of HTML and CSS. I have also learnt how to use LOTTIE. There are lots of cool features on the sites and I hope you will try them out.
